@@ -1,0 +1,12 @@
+package: github.com/modeyang/LogCruiser
+homepage: https://github.com/modeyang/LogCruiser
+ignore:
+import:
+  - package: github.com/Shopify/sarama
+  - package: github.com/bsm/sarama-cluster
+  - package: github.com/rcrowley/go-metrics
+  - package: github.com/sirupsen/logrus
+  - package: gopkg.in/yaml.v2
+  - package: github.com/flosch/pongo2
+    version: v3.0
+
