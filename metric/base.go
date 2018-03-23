@@ -129,8 +129,14 @@ func (m *MetricResult)Calculate(event map[string]interface{})error{
 }
 
 func (m *MetricResult)GetMetrics()interface{}{
+	raw_metrics := map[string]int64{}
 	allMetrics := MetricRegistry.GetAll()
+	for k, v := range(allMetrics) {
+		if c, ok := v["count"]; ok {
+			raw_metrics[k] = c.(int64)
+		}
+	}
 	MetricRegistry.UnregisterAll()
-	return allMetrics
+	return raw_metrics
 }
 

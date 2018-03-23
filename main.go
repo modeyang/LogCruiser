@@ -5,6 +5,9 @@ import (
 	"github.com/modeyang/LogCruiser/filter"
 	"github.com/modeyang/LogCruiser/metric"
 	"log"
+	"time"
+	"fmt"
+	"runtime"
 )
 
 
@@ -23,17 +26,17 @@ var CONFIG = `
 metric: "access.qps/fromhost={{.fromhost}}"
 type: "c"
 value: "{{ .count }}"
-filters:
-  - '{{ if eq .idc "bjyg" }}true{{ end }}'
 `
 
 func main() {
+	runtime.GOMAXPROCS(runtime.NumCPU())
+	start := time.Now()
 	event := make(map[string]interface{})
 	var msg = "10.100.1.145|bjyg|21/Mar/2018:17:24:12 +0800|2"
 	event["message"] = msg
 
-	for _, filter := range(LogFilters) {
-		event, _ = filter.Filter(event)
+	for _, filterFun := range(LogFilters) {
+		event, _ = filterFun.Filter(event)
 	}
 	log.Println(event)
 	var metric_item metric.MetricItem
@@ -43,7 +46,25 @@ func main() {
 		return
 	}
 	metricResults := metric.NewMetricResult([]*metric.MetricItem{&metric_item},)
-	metricResults.Calculate(event)
-	jm, _ := json.Marshal(metricResults.GetMetrics())
+	var jm []byte
+	index := 0
+	timer := time.NewTimer(3 * time.Second )
+	go func() {
+		for i:=0; i < 100000; i++ {
+			metricResults.Calculate(event)
+			jm, _ = json.Marshal(metricResults.GetMetrics())
+			index ++
+			//log.Println(string(jm))
+		}
+
+	}()
+	select {
+	case <- timer.C:
+		log.Println("timeout")
+	}
+	log.Println(index)
 	log.Println(string(jm))
+	t := time.Now()
+	elapsed := t.Sub(start)
+	fmt.Println(elapsed)
 }
