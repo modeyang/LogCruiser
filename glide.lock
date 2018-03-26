@@ -1,10 +1,10 @@
-hash: e159f4209ccad39e8ef14c4baed59258206a32a192fae83d87985943cfce9664
-updated: 2017-12-04T01:32:13.309373439+08:00
+hash: 24152a96da5fce28b9d5163561849a8ce476b80acdf1c782ece486e8c9502462
+updated: 2018-03-26T14:40:01.1937207+08:00
 imports:
 - name: github.com/bsm/sarama-cluster
   version: abf039439f66c1ce78017f560b490612552f6472
-- name: github.com/flosch/pongo2
-  version: 5e81b817a0c48c1c57cdf1a9056cf76bdee02ca9
+- name: github.com/icza/dyno
+  version: 15f794d2c82a97f44c27c18fe7d1fbea385fe40b
 - name: github.com/rcrowley/go-metrics
   version: e181e095bae94582363434144c61a9653aff6e50
 - name: github.com/Shopify/sarama

@@ -1,0 +1,47 @@
+---
+
+chsize: 1000
+interval: 3
+input:
+  - type: stdin
+    interval: 1
+
+filter:
+  - type: split
+    fields:
+      - from_host
+      - idc
+      - timestamp
+      - status
+      - request_time
+    field_split: "|"
+    remove_fields: ["message"]
+  - type: convert
+    fields:
+      status:
+        to: int
+        remove_if_fail: true
+      request_time:
+        to: int
+        multiplier: 1000
+        remove_if_fail: true
+metrics:
+  - metric: "access.qps/from_host={{.from_host}}"
+    type: counter
+    value: 1
+  - metric: "access.qps/status={{ .status }}"
+    type: counter
+    value: 1
+  - metric: "error.qps/status={{ .status }}"
+    type: counter
+    value: 1
+    filters:
+      - '{{ if .ge status 499 }}true{{ end }}'
+  - metric: "request.sum/from_host={{ .from_host }}"
+    type: counter
+    value: "{{ .request_time }}"
+
+output:
+  - type: stdout
+
+
