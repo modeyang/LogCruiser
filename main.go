@@ -1,79 +1,50 @@
 package main
 
 import (
-	"encoding/json"
-	"github.com/modeyang/LogCruiser/filter"
-	"github.com/modeyang/LogCruiser/metric"
-	"log"
-	"time"
-	"fmt"
 	"runtime"
-	"github.com/modeyang/LogCruiser/config"
+	"os"
+	"flag"
+	"fmt"
 	"context"
+	"github.com/modeyang/LogCruiser/config"
 )
 
+var (
+	confFile 	string
+	help 	bool
+)
 
-//var LogFilters []filter.LogFilter
-//func init() {
-//	log.SetFlags(log.Lshortfile | log.Ldate | log.Ltime)
-//
-//	LogFilters = make([]filter.LogFilter, 0, 5)
-//	fields := []string{"fromhost", "idc", "timestamp", "count"}
-//	remove_fields := []string{"message"}
-//	split_filter := filter.NewSplitFilter("message", fields, "|", remove_fields)
-//	LogFilters = append(LogFilters, split_filter)
-//}
+func usage() {
+	fmt.Fprintf(os.Stderr, `
+		Usage: cruiser -s <config>
+	`)
+	flag.PrintDefaults()
+}
 
-//var CONFIG = `
-//metric: "access.qps/fromhost={{.fromhost}}"
-//type: "c"
-//value: "{{ .count }}"
-//`
+func init() {
+	flag.Usage = usage
+	flag.StringVar(&confFile, "c", "", "config file")
+	flag.BoolVar(&help, "h", false, "tool help")
+}
 
 func main() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
-	/**
-		1. 初始化配置，加载配置中所需模块
-		2. 初始化信号量
-		3.
-	**/
-	conf, err := config.LoadFromFile("Log.yml")
+	flag.Parse()
+	if help {
+		flag.Usage()
+	}
+	conf, err := config.LoadFromFile(confFile)
+	if err != nil {
+		return
+	}
 	ctx , cancel := context.WithCancel(context.Background())
-	//start := time.Now()
-	//event := make(map[string]interface{})
-	//var msg = "10.100.1.145|bjyg|21/Mar/2018:17:24:12 +0800|2"
-	//event["message"] = msg
-	//
-	//for _, filterFun := range(LogFilters) {
-	//	event, _ = filterFun.Filter(event)
-	//}
-	//log.Println(event)
-	//var metric_item metric.MetricItem
-	//err := metric.NewMetricFromConfig([]byte(CONFIG), &metric_item)
-	//if err != nil {
-	//	log.Println(err)
-	//	return
-	//}
-	//metricResults := metric.NewMetricResult([]*metric.MetricItem{&metric_item},)
-	//var jm []byte
-	//index := 0
-	//timer := time.NewTimer(3 * time.Second )
-	//go func() {
-	//	for i:=0; i < 100000; i++ {
-	//		metricResults.Calculate(event)
-	//		jm, _ = json.Marshal(metricResults.GetMetrics())
-	//		index ++
-	//		//log.Println(string(jm))
-	//	}
-	//
-	//}()
-	//select {
-	//case <- timer.C:
-	//	log.Println("timeout")
-	//}
-	//log.Println(index)
-	//log.Println(string(jm))
-	//t := time.Now()
-	//elapsed := t.Sub(start)
-	//fmt.Println(elapsed)
+	defer cancel()
+
+	if err = conf.Start(ctx); err != nil {
+		return
+	}
+
+	if err = conf.Wait(); err != nil {
+		return
+	}
 }

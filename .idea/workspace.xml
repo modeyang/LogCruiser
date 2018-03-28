@@ -2,124 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="889aebe4-8144-4f3d-8358-4f9932ad0738" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Log.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/metric.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/util.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/metric/self_metric.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/config/filter.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/config/input.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/config/sink.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cruiser_test.go" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/config/config.go" afterPath="$PROJECT_DIR$/config/config.go" />
       <change beforePath="$PROJECT_DIR$/config/logevent/logevent.go" afterPath="$PROJECT_DIR$/config/logevent/logevent.go" />
-      <change beforePath="$PROJECT_DIR$/glide.lock" afterPath="$PROJECT_DIR$/glide.lock" />
-      <change beforePath="$PROJECT_DIR$/glide.yaml" afterPath="$PROJECT_DIR$/glide.yaml" />
+      <change beforePath="$PROJECT_DIR$/config/metric.go" afterPath="$PROJECT_DIR$/config/metric.go" />
+      <change beforePath="$PROJECT_DIR$/config/util.go" afterPath="$PROJECT_DIR$/config/util.go" />
       <change beforePath="$PROJECT_DIR$/main.go" afterPath="$PROJECT_DIR$/main.go" />
-      <change beforePath="$PROJECT_DIR$/metric/base.go" afterPath="$PROJECT_DIR$/metric/metric.go" />
-      <change beforePath="$PROJECT_DIR$/metric/test_base.go" afterPath="$PROJECT_DIR$/metric/metric_test.go" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/.gitignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/.travis.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/AUTHORS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/context.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/doc.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/docs/examples.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/docs/filters.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/docs/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/docs/macros.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/docs/tags.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/docs/template_sets.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/docs/write_filters.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/docs/write_tags.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/error.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/filters.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/filters_builtin.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/helpers.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/lexer.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/nodes.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/nodes_html.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/nodes_wrapper.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/parser.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/parser_document.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/parser_expression.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/pongo2.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/pongo2_issues_test.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/pongo2_template_test.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/pongo2_test.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_autoescape.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_block.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_comment.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_cycle.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_extends.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_filter.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_firstof.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_for.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_if.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_ifchanged.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_ifequal.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_ifnotequal.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_import.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_include.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_lorem.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_macro.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_now.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_set.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_spaceless.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_ssi.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_templatetag.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_widthratio.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/tags_with.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_sets.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/autoescape.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/base_dir_test/base.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/base_dir_test/subdir/include.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/base_dir_test/subdir/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/base_dir_test/subdir/ssi.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/complex.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/cycle.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/empty.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/expressions.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/extends.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/filters-compilation.err" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/filters-execution.err" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/filters.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/firstof.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/for.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/function_calls_wrapper.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/if.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/ifchanged.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/includes.helper" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/includes.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/inheritance/base.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/inheritance/base2.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/inheritance/cycle_include.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/inheritance/inheritance2/skeleton.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/issues.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/lorem.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/macro-compilation.err" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/macro-execution.err" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/macro.helper" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/macro.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/macro2.helper" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/now.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/pongo2ctx.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/sandbox-compilation.err" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/sandbox.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/set.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/spaceless.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/ssi.helper" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/ssi.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/tag_filter.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/tags-compilation.err" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/template_sets.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/templatetag.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/variables.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/verbatim.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/widthratio.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/with.helper" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/template_tests/with.tpl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/value.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/flosch/pongo2/variable.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/metric/metric.go" afterPath="$PROJECT_DIR$/metric/metric.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -131,31 +24,15 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="metric.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/metric/metric.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-578">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding>
-                <element signature="e#16#231#0" expanded="true" />
-                <element signature="n#!!block;n#NewMetricFromConfig#0" expanded="true" />
-                <element signature="n#!!block;n#RenderTemplate#0" expanded="true" />
-                <element signature="n#!!block;n#Render#0" expanded="true" />
-                <element signature="n#!!block;n#RenderValue#0" expanded="true" />
-                <element signature="n#!!block;n#Filter#0" expanded="true" />
-                <element signature="e#2573#2635#0" expanded="true" />
-                <element signature="n#!!block;n#startCalcuateMetrics#0" expanded="true" />
-                <element signature="e#2856#2858#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="metric.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/metric.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="272">
+              <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+              <folding>
+                <element signature="e#16#172#0" expanded="true" />
+                <element signature="n#!!block;n#getMetrics#0" expanded="true" />
+                <element signature="n#!!block;n#startMetrics#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,14 +40,12 @@
       <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="46" lean-forward="false" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+            <state relative-caret-position="782">
+              <caret line="46" column="16" lean-forward="false" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
               <folding>
-                <element signature="e#14#208#0" expanded="true" />
-                <element signature="e#606#622#0" expanded="true" />
-                <element signature="n#!!block;n#main#1" expanded="true" />
-                <element signature="e#763#809#0" expanded="true" />
-                <element signature="e#914#935#0" expanded="true" />
+                <element signature="e#14#108#0" expanded="true" />
+                <element signature="n#!!block;n#usage#0" expanded="true" />
+                <element signature="n#!!block;n#init#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -179,82 +54,67 @@
       <file leaf-file-name="logevent.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/logevent/logevent.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-43">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="272">
+              <caret line="32" column="1" lean-forward="false" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="util.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/util.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filter.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/filter.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-137">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
-                <element signature="e#18#69#0" expanded="true" />
-                <element signature="n#!!block;n#NewLogEvent#0" expanded="true" />
-                <element signature="n#!!block;n#AddTag#0" expanded="true" />
-                <element signature="n#!!block;n#renderTemplate#0" expanded="true" />
+                <element signature="e#16#97#0" expanded="true" />
+                <element signature="n#!!block;n#RegisterFilterHandler#0" expanded="true" />
+                <element signature="n#!!block;n#getFilters#0" expanded="true" />
+                <element signature="n#!!block;n#startFilters#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Log.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Log.yml">
+      <file leaf-file-name="input.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/input.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-              <folding />
+            <state relative-caret-position="-1">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding>
+                <element signature="e#16#97#0" expanded="true" />
+                <element signature="n#!!block;n#RegisterInputHandler#0" expanded="true" />
+                <element signature="n#!!block;n#getInputs#0" expanded="true" />
+                <element signature="n#!!block;n#startInput#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/filter/base.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/config.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="288">
+              <caret line="130" column="20" lean-forward="false" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="20" />
               <folding>
-                <element signature="e#16#218#0" expanded="true" />
+                <element signature="e#16#241#0" expanded="true" />
                 <element signature="n#!!block;n#GetType#0" expanded="true" />
                 <element signature="n#!!block;n#LoadFromFile#0" expanded="true" />
                 <element signature="n#!!block;n#LoadFromYaml#0" expanded="true" />
-                <element signature="n#!!block;n#start#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="util.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/util.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="self_metric.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/metric/self_metric.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="metric_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/metric/metric_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-              <folding>
-                <element signature="e#16#32#0" expanded="true" />
-                <element signature="n#!!block;n#TestMetricResult_GetMetrics#0" expanded="true" />
+                <element signature="n#!!block;n#initConfig#0" expanded="true" />
+                <element signature="n#!!block;n#handleMetrics#0" expanded="true" />
+                <element signature="n#!!block;n#Start#0" expanded="true" />
+                <element signature="n#!!block;n#Wait#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -276,9 +136,15 @@
       <find>fmt</find>
       <find>winbug.go</find>
       <find>MetricConfig</find>
+      <find>Struct</find>
+      <find>MetricItemConfig</find>
+      <find>GetAll</find>
+      <find>SinkInterval</find>
     </findStrings>
     <replaceStrings>
       <replace>MetricItemConfig</replace>
+      <replace>MetricConfig</replace>
+      <replace>SinkTimeRange</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\go_path\src\github.com\Masterminds</dir>
@@ -301,14 +167,19 @@
         <option value="$PROJECT_DIR$/glide.lock" />
         <option value="$PROJECT_DIR$/../../Masterminds/glide/path/winbug.go" />
         <option value="$PROJECT_DIR$/metric/metric_test.go" />
-        <option value="$PROJECT_DIR$/main.go" />
-        <option value="$PROJECT_DIR$/config/logevent/logevent.go" />
         <option value="$PROJECT_DIR$/metric/self_metric.go" />
-        <option value="$PROJECT_DIR$/metric/metric.go" />
         <option value="$PROJECT_DIR$/Log.yml" />
+        <option value="$PROJECT_DIR$/config/cruiser_test.go" />
+        <option value="$PROJECT_DIR$/cruiser_test.go" />
+        <option value="$PROJECT_DIR$/config/filter.go" />
+        <option value="$PROJECT_DIR$/config/input.go" />
+        <option value="$PROJECT_DIR$/config/util.go" />
+        <option value="$PROJECT_DIR$/metric/metric.go" />
+        <option value="$PROJECT_DIR$/config/sink.go" />
         <option value="$PROJECT_DIR$/config/metric.go" />
         <option value="$PROJECT_DIR$/config/config.go" />
-        <option value="$PROJECT_DIR$/config/util.go" />
+        <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/config/logevent/logevent.go" />
       </list>
     </option>
   </component>
@@ -353,6 +224,17 @@
               <item name="LogCruiser" type="b2602c69:ProjectViewProjectNode" />
               <item name="LogCruiser" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LogCruiser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LogCruiser" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="logevent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LogCruiser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LogCruiser" type="462c0819:PsiDirectoryNode" />
+              <item name="metric" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LogCruiser" type="b2602c69:ProjectViewProjectNode" />
@@ -460,17 +342,17 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1892936" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.49779248" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5022075" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5022075" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.49779248" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3375" sideWeight="0.49779248" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3375" sideWeight="0.49779248" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299389" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299389" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -495,74 +377,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/metric/metric.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#231#0" expanded="true" />
-            <element signature="n#!!block;n#NewMetricFromConfig#0" expanded="true" />
-            <element signature="n#!!block;n#RenderTemplate#0" expanded="true" />
-            <element signature="n#!!block;n#Render#0" expanded="true" />
-            <element signature="n#!!block;n#RenderValue#0" expanded="true" />
-            <element signature="n#!!block;n#Filter#0" expanded="true" />
-            <element signature="e#2573#2635#0" expanded="true" />
-            <element signature="n#!!block;n#startCalcuateMetrics#0" expanded="true" />
-            <element signature="e#2856#2858#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="11" lean-forward="false" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
-          <folding>
-            <element signature="e#14#208#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/logevent/logevent.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#218#0" expanded="true" />
-            <element signature="n#!!block;n#GetType#0" expanded="true" />
-            <element signature="n#!!block;n#LoadFromFile#0" expanded="true" />
-            <element signature="n#!!block;n#LoadFromYaml#0" expanded="true" />
-            <element signature="n#!!block;n#start#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/metric/metric_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-          <folding>
-            <element signature="e#16#32#0" expanded="true" />
-            <element signature="n#!!block;n#TestMetricResult_GetMetrics#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Go/src/text/template/exec.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -582,31 +396,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Go/src/bytes/buffer.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="50" column="17" lean-forward="false" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/github.com/rcrowley/go-metrics/gauge.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Go/src/fmt/print.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="265" column="11" lean-forward="false" selection-start-line="265" selection-start-column="11" selection-end-line="265" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/reflect/type.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="222" column="5" lean-forward="false" selection-start-line="222" selection-start-column="5" selection-end-line="222" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -636,13 +429,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/github.com/rcrowley/go-metrics/counter.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/yaml.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6">
@@ -654,16 +440,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-531">
           <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/encoding/json/encode.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="158" column="5" lean-forward="false" selection-start-line="158" selection-start-column="5" selection-end-line="158" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!block;n#Marshal#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -722,32 +498,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Go/src/io/ioutil/ioutil.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="48" column="5" lean-forward="false" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!block;n#ReadFile#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/filter/Split.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/golang.org/x/sync/errgroup/errgroup.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#333#380#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -761,36 +516,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Go/src/time/time.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1071">
-          <caret line="420" column="27" lean-forward="true" selection-start-line="420" selection-start-column="27" selection-end-line="420" selection-end-column="27" />
-          <folding>
-            <element signature="e#344#359#0" expanded="true" />
-            <element signature="e#1996#2039#0" expanded="true" />
-            <element signature="e#2145#2197#0" expanded="true" />
-            <element signature="n#!!block;n#String#0" expanded="true" />
-            <element signature="n#!!block;n#Second#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/metric/self_metric.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/metric/metric_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding>
-            <element signature="e#16#32#0" expanded="true" />
-            <element signature="n#!!block;n#TestMetricResult_GetMetrics#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -802,96 +532,351 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/logevent/logevent.go">
+    <entry file="file://C:/Go/src/encoding/json/stream.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-43">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="187">
+          <caret line="249" column="50" lean-forward="true" selection-start-line="249" selection-start-column="50" selection-end-line="249" selection-end-column="50" />
           <folding>
-            <element signature="e#18#69#0" expanded="true" />
-            <element signature="n#!!block;n#NewLogEvent#0" expanded="true" />
-            <element signature="n#!!block;n#AddTag#0" expanded="true" />
-            <element signature="n#!!block;n#renderTemplate#0" expanded="true" />
+            <element signature="n#!!block;n#NewEncoder#0" expanded="false" />
+            <element signature="n#!!block;n#MarshalJSON#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/github.com/rcrowley/go-metrics/registry.go">
+    <entry file="file://C:/Go/src/os/file_windows.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="-850">
+          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/os/types.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/os/file.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="245" column="27" lean-forward="false" selection-start-line="245" selection-start-column="27" selection-end-line="245" selection-end-column="27" />
           <folding>
-            <element signature="n#!!block;n#NewRegistry#0" expanded="true" />
+            <element signature="n#!!block;n#Seek#0" expanded="false" />
+            <element signature="n#!!block;n#Open#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/io/ioutil/ioutil.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="28" column="15" lean-forward="false" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+          <folding>
+            <element signature="n#!!block;n#ReadAll#0" expanded="false" />
+            <element signature="n#!!block;n#ReadFile#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metric/metric_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#16#32#0" expanded="false" />
+            <element signature="n#!!block;n#TestMetricResult_GetMetrics#0" expanded="false" />
+            <element signature="e#105#159#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/reflect/type.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="181" column="4" lean-forward="true" selection-start-line="181" selection-start-column="4" selection-end-line="181" selection-end-column="4" />
+          <folding>
+            <element signature="e#6633#6671#0" expanded="false" />
+            <element signature="n#!!block;n#uncommon#0" expanded="false" />
+            <element signature="n#!!block;n#TypeOf#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cruiser_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="e#14#46#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/icza/dyno/dyno.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="514" column="5" lean-forward="false" selection-start-line="514" selection-start-column="5" selection-end-line="514" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!block;n#ConvertMapI2MapS#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/reflect/value.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="132" column="5" lean-forward="false" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!block;n#unpackEface#0" expanded="false" />
+            <element signature="n#!!block;n#ValueOf#0" expanded="false" />
+            <element signature="e#62119#62181#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/time/tick.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!block;n#NewTicker#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/errors/errors.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!block;n#New#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Log.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        <state relative-caret-position="356">
+          <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/metric.go">
+    <entry file="file://C:/Go/src/bytes/buffer.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="397">
+          <caret line="46" column="17" lean-forward="false" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!block;n#Bytes#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/encoding/json/encode.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2737">
+          <caret line="160" column="15" lean-forward="false" selection-start-line="160" selection-start-column="15" selection-end-line="160" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/sync/mutex.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="103" column="25" lean-forward="true" selection-start-line="103" selection-start-column="25" selection-end-line="103" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!block;n#Lock#0" expanded="false" />
+            <element signature="n#!!block;n#Unlock#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/metric/metric.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-578">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="356">
+          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
           <folding>
-            <element signature="e#16#231#0" expanded="true" />
-            <element signature="n#!!block;n#NewMetricFromConfig#0" expanded="true" />
-            <element signature="n#!!block;n#RenderTemplate#0" expanded="true" />
-            <element signature="n#!!block;n#Render#0" expanded="true" />
-            <element signature="n#!!block;n#RenderValue#0" expanded="true" />
-            <element signature="n#!!block;n#Filter#0" expanded="true" />
-            <element signature="e#2573#2635#0" expanded="true" />
-            <element signature="n#!!block;n#startCalcuateMetrics#0" expanded="true" />
-            <element signature="e#2856#2858#0" expanded="true" />
+            <element signature="e#16#205#0" expanded="true" />
+            <element signature="n#!!block;n#DefaultMetricConfig#0" expanded="true" />
+            <element signature="n#!!block;n#InitMetricConfig#0" expanded="true" />
+            <element signature="n#!!block;n#render#0" expanded="true" />
+            <element signature="n#!!block;n#renderValue#0" expanded="true" />
+            <element signature="n#!!block;n#filter#0" expanded="true" />
+            <element signature="n#!!block;n#Calculate#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/sink.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="48" column="28" lean-forward="false" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+          <folding>
+            <element signature="e#16#47#0" expanded="false" />
+            <element signature="n#!!block;n#RegisterSinkHandler#0" expanded="false" />
+            <element signature="n#!!block;n#getSinkers#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/golang.org/x/sync/errgroup/errgroup.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="39" column="16" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding>
+            <element signature="n#!!block;n#Wait#0" expanded="false" />
+            <element signature="n#!!block;n#Go#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/sync/rwmutex.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/time/time.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="420" column="14" lean-forward="false" selection-start-line="420" selection-start-column="14" selection-end-line="420" selection-end-column="14" />
+          <folding>
+            <element signature="n#!!block;n#Second#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/metric.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding>
+            <element signature="e#16#172#0" expanded="true" />
+            <element signature="n#!!block;n#getMetrics#0" expanded="true" />
+            <element signature="n#!!block;n#startMetrics#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/rcrowley/go-metrics/registry.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="123" column="43" lean-forward="false" selection-start-line="123" selection-start-column="43" selection-end-line="123" selection-end-column="43" />
+          <folding>
+            <element signature="n#!!block;n#Error#0" expanded="true" />
+            <element signature="n#!!block;n#NewRegistry#0" expanded="true" />
+            <element signature="n#!!block;n#Each#0" expanded="true" />
+            <element signature="n#!!block;n#Unregister#0" expanded="true" />
+            <element signature="n#!!block;n#UnregisterAll#0" expanded="true" />
+            <element signature="n#!!block;n#register#0" expanded="true" />
+            <element signature="n#!!block;n#registered#0" expanded="true" />
+            <element signature="n#!!block;n#stop#0" expanded="true" />
+            <element signature="n#!!block;n#GetAll#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/rcrowley/go-metrics/counter.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="94" column="40" lean-forward="true" selection-start-line="94" selection-start-column="40" selection-end-line="94" selection-end-column="40" />
+          <folding>
+            <element signature="n#!!block;n#Count#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/rcrowley/go-metrics/gauge.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-307">
+          <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="46" lean-forward="false" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+        <state relative-caret-position="782">
+          <caret line="46" column="16" lean-forward="false" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
           <folding>
-            <element signature="e#14#208#0" expanded="true" />
-            <element signature="e#606#622#0" expanded="true" />
-            <element signature="n#!!block;n#main#1" expanded="true" />
-            <element signature="e#763#809#0" expanded="true" />
-            <element signature="e#914#935#0" expanded="true" />
+            <element signature="e#14#108#0" expanded="true" />
+            <element signature="n#!!block;n#usage#0" expanded="true" />
+            <element signature="n#!!block;n#init#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.go">
+    <entry file="file://$PROJECT_DIR$/config/logevent/logevent.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="32" column="1" lean-forward="false" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/flag/flag.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="717" column="0" lean-forward="true" selection-start-line="717" selection-start-column="0" selection-end-line="717" selection-end-column="0" />
           <folding>
-            <element signature="e#16#218#0" expanded="true" />
-            <element signature="n#!!block;n#GetType#0" expanded="true" />
-            <element signature="n#!!block;n#LoadFromFile#0" expanded="true" />
-            <element signature="n#!!block;n#LoadFromYaml#0" expanded="true" />
-            <element signature="n#!!block;n#start#0" expanded="true" />
+            <element signature="n#!!block;n#String#9" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/util.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        <state relative-caret-position="119">
+          <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/input.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#16#97#0" expanded="true" />
+            <element signature="n#!!block;n#RegisterInputHandler#0" expanded="true" />
+            <element signature="n#!!block;n#getInputs#0" expanded="true" />
+            <element signature="n#!!block;n#startInput#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/filter.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-137">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#16#97#0" expanded="true" />
+            <element signature="n#!!block;n#RegisterFilterHandler#0" expanded="true" />
+            <element signature="n#!!block;n#getFilters#0" expanded="true" />
+            <element signature="n#!!block;n#startFilters#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="130" column="20" lean-forward="false" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="20" />
+          <folding>
+            <element signature="e#16#241#0" expanded="true" />
+            <element signature="n#!!block;n#GetType#0" expanded="true" />
+            <element signature="n#!!block;n#LoadFromFile#0" expanded="true" />
+            <element signature="n#!!block;n#LoadFromYaml#0" expanded="true" />
+            <element signature="n#!!block;n#initConfig#0" expanded="true" />
+            <element signature="n#!!block;n#handleMetrics#0" expanded="true" />
+            <element signature="n#!!block;n#Start#0" expanded="true" />
+            <element signature="n#!!block;n#Wait#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

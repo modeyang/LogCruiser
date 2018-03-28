@@ -1,78 +1,77 @@
 package metric
 
 import (
-	"github.com/rcrowley/go-metrics"
-	"gopkg.in/yaml.v2"
-	"bytes"
 	"text/template"
 	"strconv"
 	"log"
-	"sync"
-	"time"
-	"github.com/modeyang/LogCruiser/config/logevent"
 	"github.com/modeyang/LogCruiser/config"
+	"context"
+	"github.com/modeyang/LogCruiser/config/logevent"
+	"github.com/rcrowley/go-metrics"
+	"sync"
 )
 
-type MetricItemConfig struct {
-	MetricTmpl string `yaml:"metric"`
-	MetricType string `yaml:"type"`
+type MetricConfig struct {
+	config.CommonConfig
+	MetricTmpl 	string 		`yaml:"metric"`
 	MetricValue interface{} `yaml:"value"`
-	FilterTmpls []string `yaml:"filters"`
+	FilterTmpls []string 	`yaml:"filters"`
 
 	MetricName 		*template.Template
 	FilterFuncs	   	[]*template.Template
+	registerLock 	sync.Mutex
 }
 
 var NAMESPACE = "Metric"
 
-func NewMetricFromConfig(data []byte, metric_item *MetricItemConfig)(error) {
-	err := yaml.Unmarshal(data, metric_item)
-	if err != nil {
-		return err
+func DefaultMetricConfig() MetricConfig {
+	return MetricConfig{
+		CommonConfig: config.CommonConfig{
+			Type: "counter",
+		},
 	}
-	tmpl, err := template.New(NAMESPACE).Parse(metric_item.MetricTmpl)
+}
+
+func InitMetricConfig(ctx context.Context, raw *config.ConfigRaw) (config.TypeMetricConfig, error) {
+	conf := DefaultMetricConfig()
+	err := config.ReflectConfig(raw, &conf)
 	if err != nil {
-		return err
+		return nil, err
 	}
-	metric_item.MetricName = tmpl
-	switch metric_item.MetricValue.(type) {
+	tmpl, err := template.New(NAMESPACE).Parse(conf.MetricTmpl)
+	if err != nil {
+		return nil, err
+	}
+	conf.MetricName = tmpl
+	switch conf.MetricValue.(type) {
 	case string:
-		metric_item.MetricValue, _ = template.New("test").Parse(metric_item.MetricValue.(string))
+		conf.MetricValue, _ = template.New("test").Parse(conf.MetricValue.(string))
 	}
-	if len(metric_item.FilterTmpls) > 0 {
-		metric_item.FilterFuncs = []*template.Template{}
-		for i, tpl := range(metric_item.FilterTmpls) {
+	if len(conf.FilterTmpls) > 0 {
+		conf.FilterFuncs = []*template.Template{}
+		for i, tpl := range(conf.FilterTmpls) {
 			tmpl, err := template.New(string(i)).Parse(tpl)
 			if err != nil {
 				log.Fatalln(err)
-				return err
+				return nil, err
 			}
-			metric_item.FilterFuncs = append(metric_item.FilterFuncs, tmpl)
+			conf.FilterFuncs = append(conf.FilterFuncs, tmpl)
 		}
 	}
-	return nil
+	return &conf, nil
 }
 
-func RenderTemplate(tmpl *template.Template, event map[string]interface{}) (string, error) {
-	var tpl bytes.Buffer
-	err := tmpl.Execute(&tpl, event)
-	if err != nil {
-		log.Fatalln(err)
-		return "", err
-	}
-	return tpl.String(), nil
+
+func (mtr *MetricConfig)render(event map[string]interface{})(string, error) {
+	return config.RenderTemplate(mtr.MetricName, event)
 }
 
-func (mtr *MetricItemConfig)Render(event map[string]interface{})(string, error) {
-	return RenderTemplate(mtr.MetricName, event)
-}
-
-func (mtr *MetricItemConfig)RenderValue(event map[string]interface{})int64{
+func (mtr *MetricConfig)renderValue(event map[string]interface{})int64{
 	switch mtr.MetricValue.(type) {
 	case int:
 		return int64(mtr.MetricValue.(int))
 	case *template.Template:
-		value ,_:= RenderTemplate(mtr.MetricValue.(*template.Template), event)
+		value ,_:= config.RenderTemplate(mtr.MetricValue.(*template.Template), event)
 		if value != "" {
 			intValue, err := strconv.ParseInt(value, 10, 64)
 			if err != nil {
@@ -84,9 +83,9 @@ func (mtr *MetricItemConfig)RenderValue(event map[string]interface{})int64{
 	panic(mtr.MetricValue)
 }
 
-func (mtr *MetricItemConfig)Filter(event map[string]interface{})bool {
+func (mtr *MetricConfig)filter(event map[string]interface{})bool {
 	for _, filter_tmpl := range(mtr.FilterFuncs) {
-		pass, _ := RenderTemplate(filter_tmpl, event)
+		pass, _ := config.RenderTemplate(filter_tmpl, event)
 		if pass == "" {
 			return false
 		}
@@ -94,72 +93,24 @@ func (mtr *MetricItemConfig)Filter(event map[string]interface{})bool {
 	return true
 }
 
-type MetricResult struct {
-	Timestamp time.Time
-	AppMetric map[string]int64
-}
-
-type MetricConfig struct {
-	Metrics 	[]*MetricItemConfig 		`yaml:"metrics"`
-	MapResults 	map[int64]MetricResult
-
-	MapRegistry map[int64]metrics.StandardRegistry
-}
-
-type MetricChan chan MetricResult
-
-//func NewMetricProcessor(m []*MetricItemConfig)*MetricConfig{
-//	return &MetricConfig{Metrics: m, MapResults: make(map[int64]MetricResult)}
-//}
-
-func (c *config.Config) startCalcuateMetrics() {
-	c.eg.Go(func()error{
+func (mtr *MetricConfig)Calculate(ctx context.Context, registry metrics.Registry, event logevent.LogEvent)error {
+	metric_name, err := mtr.render(event.Event)
+	if err != nil {
+		log.Printf("render template %v failed\n", mtr.MetricTmpl)
 		return nil
-	})
-
+	}
+	if ok := mtr.filter(event.Event); ok {
+		switch  {
+		case mtr.Type == "counter" || mtr.Type == "c":
+			mtr.registerLock.Lock()
+			defer mtr.registerLock.Unlock()
+			metricFunc := metrics.GetOrRegisterCounter(metric_name, registry)
+			metricFunc.Inc(mtr.renderValue(event.Event))
+		default:
+			log.Printf("metric type %s is not right\n", mtr.Type)
+		}
+	}
+	return nil
 }
 
-var MetricRegistry = metrics.DefaultRegistry
-//
-//func (m *MetricConfig)Calculate(logEvent *logevent.LogEvent)error{
-//	var wg sync.WaitGroup
-//	event := logEvent.Event
-//	for _, mtr := range(m.Metrics) {
-//		metric_name, err := mtr.Render(event)
-//		if err != nil {
-//			log.Printf("render template %v failed\n", mtr.MetricTmpl)
-//			continue
-//		}
-//		wg.Add(1)
-//		go func(this *MetricConfig, mtr *MetricItemConfig, event map[string]interface{}){
-//			if mtr.Filter(event) {
-//				switch {
-//				case mtr.MetricType == "counter" || mtr.MetricType == "c":
-//					metricFunc := metrics.GetOrRegisterCounter(metric_name, MetricRegistry)
-//					metricFunc.Inc(mtr.RenderValue(event))
-//				default:
-//					log.Printf("metric type %s is not right\n", mtr.MetricType)
-//				}
-//			}
-//			wg.Done()
-//		}(m, mtr, event)
-//
-//	}
-//	wg.Wait()
-//	return nil
-//}
-//
-//
-//
-//func (m *MetricConfig)GetMetrics()interface{}{
-//	raw_metrics := map[string]int64{}
-//	allMetrics := MetricRegistry.GetAll()
-//	for k, v := range(allMetrics) {
-//		if c, ok := v["count"]; ok {
-//			raw_metrics[k] = c.(int64)
-//		}
-//	}
-//	MetricRegistry.UnregisterAll()
-//	return raw_metrics
-//}
 

@@ -32,14 +32,3 @@ func (t *LogEvent)AddTag(tags ...string) {
 	}
 }
 
-func renderTemplate(tmpl *template.Template, event map[string]interface{}) (string, error) {
-	var tpl bytes.Buffer
-	err := tmpl.Execute(&tpl, event)
-	if err != nil {
-		log.Fatalln(err)
-		return "", err
-	}
-	return tpl.String(), nil
-}
-
-
