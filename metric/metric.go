@@ -8,7 +8,6 @@ import (
 	"context"
 	"github.com/modeyang/LogCruiser/config/logevent"
 	"github.com/rcrowley/go-metrics"
-	"sync"
 )
 
 type MetricConfig struct {
@@ -19,7 +18,6 @@ type MetricConfig struct {
 
 	MetricName 		*template.Template
 	FilterFuncs	   	[]*template.Template
-	registerLock 	sync.Mutex
 }
 
 var NAMESPACE = "Metric"
@@ -102,8 +100,6 @@ func (mtr *MetricConfig)Calculate(ctx context.Context, registry metrics.Registry
 	if ok := mtr.filter(event.Event); ok {
 		switch  {
 		case mtr.Type == "counter" || mtr.Type == "c":
-			mtr.registerLock.Lock()
-			defer mtr.registerLock.Unlock()
 			metricFunc := metrics.GetOrRegisterCounter(metric_name, registry)
 			metricFunc.Inc(mtr.renderValue(event.Event))
 		default:

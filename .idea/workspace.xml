@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="889aebe4-8144-4f3d-8358-4f9932ad0738" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/filter.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/input.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/sink.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cruiser_test.go" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/config/config.go" afterPath="$PROJECT_DIR$/config/config.go" />
-      <change beforePath="$PROJECT_DIR$/config/logevent/logevent.go" afterPath="$PROJECT_DIR$/config/logevent/logevent.go" />
-      <change beforePath="$PROJECT_DIR$/config/metric.go" afterPath="$PROJECT_DIR$/config/metric.go" />
-      <change beforePath="$PROJECT_DIR$/config/util.go" afterPath="$PROJECT_DIR$/config/util.go" />
-      <change beforePath="$PROJECT_DIR$/main.go" afterPath="$PROJECT_DIR$/main.go" />
       <change beforePath="$PROJECT_DIR$/metric/metric.go" afterPath="$PROJECT_DIR$/metric/metric.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,15 +13,65 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="metric.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/metric/metric.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1106">
+              <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+              <folding>
+                <element signature="e#16#197#0" expanded="true" />
+                <element signature="n#!!block;n#DefaultMetricConfig#0" expanded="true" />
+                <element signature="n#!!block;n#InitMetricConfig#0" expanded="true" />
+                <element signature="n#!!block;n#render#0" expanded="true" />
+                <element signature="n#!!block;n#renderValue#0" expanded="true" />
+                <element signature="n#!!block;n#filter#0" expanded="true" />
+                <element signature="n#!!block;n#Calculate#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="counter.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/github.com/rcrowley/go-metrics/counter.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+              <folding>
+                <element signature="n#!!block;n#Count#2" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registry.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/github.com/rcrowley/go-metrics/registry.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="83" column="17" lean-forward="false" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+              <folding>
+                <element signature="n#!!block;n#Error#0" expanded="true" />
+                <element signature="n#!!block;n#NewRegistry#0" expanded="true" />
+                <element signature="n#!!block;n#Each#0" expanded="true" />
+                <element signature="n#!!block;n#GetAll#0" expanded="true" />
+                <element signature="n#!!block;n#Unregister#0" expanded="true" />
+                <element signature="n#!!block;n#UnregisterAll#0" expanded="true" />
+                <element signature="n#!!block;n#register#0" expanded="true" />
+                <element signature="n#!!block;n#registered#0" expanded="true" />
+                <element signature="n#!!block;n#stop#0" expanded="true" />
+                <element signature="n#!!block;n#GetAll#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="metric.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/metric.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state relative-caret-position="765">
+              <caret line="45" column="41" lean-forward="false" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
               <folding>
                 <element signature="e#16#172#0" expanded="true" />
                 <element signature="n#!!block;n#getMetrics#0" expanded="true" />
-                <element signature="n#!!block;n#startMetrics#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,10 +141,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/config.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="84">
               <caret line="130" column="20" lean-forward="false" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="20" />
               <folding>
                 <element signature="e#16#241#0" expanded="true" />
@@ -174,12 +214,12 @@
         <option value="$PROJECT_DIR$/config/filter.go" />
         <option value="$PROJECT_DIR$/config/input.go" />
         <option value="$PROJECT_DIR$/config/util.go" />
-        <option value="$PROJECT_DIR$/metric/metric.go" />
         <option value="$PROJECT_DIR$/config/sink.go" />
         <option value="$PROJECT_DIR$/config/metric.go" />
         <option value="$PROJECT_DIR$/config/config.go" />
         <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/config/logevent/logevent.go" />
+        <option value="$PROJECT_DIR$/metric/metric.go" />
       </list>
     </option>
   </component>
@@ -694,22 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/metric/metric.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-          <folding>
-            <element signature="e#16#205#0" expanded="true" />
-            <element signature="n#!!block;n#DefaultMetricConfig#0" expanded="true" />
-            <element signature="n#!!block;n#InitMetricConfig#0" expanded="true" />
-            <element signature="n#!!block;n#render#0" expanded="true" />
-            <element signature="n#!!block;n#renderValue#0" expanded="true" />
-            <element signature="n#!!block;n#filter#0" expanded="true" />
-            <element signature="n#!!block;n#Calculate#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/sink.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -747,46 +771,6 @@
           <caret line="420" column="14" lean-forward="false" selection-start-line="420" selection-start-column="14" selection-end-line="420" selection-end-column="14" />
           <folding>
             <element signature="n#!!block;n#Second#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/metric.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding>
-            <element signature="e#16#172#0" expanded="true" />
-            <element signature="n#!!block;n#getMetrics#0" expanded="true" />
-            <element signature="n#!!block;n#startMetrics#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/github.com/rcrowley/go-metrics/registry.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="123" column="43" lean-forward="false" selection-start-line="123" selection-start-column="43" selection-end-line="123" selection-end-column="43" />
-          <folding>
-            <element signature="n#!!block;n#Error#0" expanded="true" />
-            <element signature="n#!!block;n#NewRegistry#0" expanded="true" />
-            <element signature="n#!!block;n#Each#0" expanded="true" />
-            <element signature="n#!!block;n#Unregister#0" expanded="true" />
-            <element signature="n#!!block;n#UnregisterAll#0" expanded="true" />
-            <element signature="n#!!block;n#register#0" expanded="true" />
-            <element signature="n#!!block;n#registered#0" expanded="true" />
-            <element signature="n#!!block;n#stop#0" expanded="true" />
-            <element signature="n#!!block;n#GetAll#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/github.com/rcrowley/go-metrics/counter.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="94" column="40" lean-forward="true" selection-start-line="94" selection-start-column="40" selection-end-line="94" selection-end-column="40" />
-          <folding>
-            <element signature="n#!!block;n#Count#2" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -850,6 +834,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="130" column="20" lean-forward="false" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="20" />
+          <folding>
+            <element signature="e#16#241#0" expanded="true" />
+            <element signature="n#!!block;n#GetType#0" expanded="true" />
+            <element signature="n#!!block;n#LoadFromFile#0" expanded="true" />
+            <element signature="n#!!block;n#LoadFromYaml#0" expanded="true" />
+            <element signature="n#!!block;n#initConfig#0" expanded="true" />
+            <element signature="n#!!block;n#handleMetrics#0" expanded="true" />
+            <element signature="n#!!block;n#Start#0" expanded="true" />
+            <element signature="n#!!block;n#Wait#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/filter.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-137">
@@ -863,19 +864,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.go">
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/rcrowley/go-metrics/counter.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="130" column="20" lean-forward="false" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="20" />
+        <state relative-caret-position="274">
+          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
           <folding>
-            <element signature="e#16#241#0" expanded="true" />
-            <element signature="n#!!block;n#GetType#0" expanded="true" />
-            <element signature="n#!!block;n#LoadFromFile#0" expanded="true" />
-            <element signature="n#!!block;n#LoadFromYaml#0" expanded="true" />
-            <element signature="n#!!block;n#initConfig#0" expanded="true" />
-            <element signature="n#!!block;n#handleMetrics#0" expanded="true" />
-            <element signature="n#!!block;n#Start#0" expanded="true" />
-            <element signature="n#!!block;n#Wait#0" expanded="true" />
+            <element signature="n#!!block;n#Count#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/rcrowley/go-metrics/registry.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="83" column="17" lean-forward="false" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!block;n#Error#0" expanded="true" />
+            <element signature="n#!!block;n#NewRegistry#0" expanded="true" />
+            <element signature="n#!!block;n#Each#0" expanded="true" />
+            <element signature="n#!!block;n#GetAll#0" expanded="true" />
+            <element signature="n#!!block;n#Unregister#0" expanded="true" />
+            <element signature="n#!!block;n#UnregisterAll#0" expanded="true" />
+            <element signature="n#!!block;n#register#0" expanded="true" />
+            <element signature="n#!!block;n#registered#0" expanded="true" />
+            <element signature="n#!!block;n#stop#0" expanded="true" />
+            <element signature="n#!!block;n#GetAll#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/metric.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="41" lean-forward="false" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+          <folding>
+            <element signature="e#16#172#0" expanded="true" />
+            <element signature="n#!!block;n#getMetrics#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metric/metric.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1106">
+          <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding>
+            <element signature="e#16#197#0" expanded="true" />
+            <element signature="n#!!block;n#DefaultMetricConfig#0" expanded="true" />
+            <element signature="n#!!block;n#InitMetricConfig#0" expanded="true" />
+            <element signature="n#!!block;n#render#0" expanded="true" />
+            <element signature="n#!!block;n#renderValue#0" expanded="true" />
+            <element signature="n#!!block;n#filter#0" expanded="true" />
+            <element signature="n#!!block;n#Calculate#0" expanded="true" />
           </folding>
         </state>
       </provider>
