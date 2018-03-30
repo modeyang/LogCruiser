@@ -5,13 +5,14 @@ import (
 	"path/filepath"
 	"errors"
 	"gopkg.in/yaml.v2"
-	"context"
-	"golang.org/x/sync/errgroup"
+	"github.com/modeyang/LogCruiser/errgroup"
 	"github.com/modeyang/LogCruiser/config/logevent"
 	"github.com/rcrowley/go-metrics"
 	"reflect"
 	"syscall"
 	"time"
+	"context"
+	"log"
 )
 
 // TypeCommonConfig is interface of basic config
@@ -41,8 +42,8 @@ type Config struct {
 	SinkRaw 	[]ConfigRaw `yaml:"sink"`
 
 	ChanSize 	int64		`yaml:"chsize,omitempty"`
-	Interval 	int64 		`yaml:"interval,default 3"`
-	SinkTimeRange int64		`yaml:"sinkTimeRange,default 60"`
+	Interval 	int64 		`yaml:"interval"`
+	SinkTimeRange int64		`yaml:"sinkTimeRange"`
 
 	chInFilter  MsgChan // channel from input to filter
 	chInMetric 	MsgChan // channel from filter to metric
@@ -124,27 +125,16 @@ func (c *Config) handleMetrics()error{
 	}
 	now := time.Now().Second()
 	timestamp := now - now % int(c.SinkTimeRange)
-	c.chInSinker <- MetricResult{Timestamp: timestamp, Data: rawMetrics}
+	if len(rawMetrics) > 0 {
+		log.Println(rawMetrics)
+		c.chInSinker <- MetricResult{Timestamp: timestamp, Data: rawMetrics}
+	}
 	return nil
 }
 
 func (c *Config)Start(ctx context.Context) (err error){
 	ctx = contextWithOSSignal(ctx, syscall.SIGINT, syscall.SIGTERM)
 	c.eg, c.ctx = errgroup.WithContext(ctx)
-
-	if err = c.startInput(); err != nil {
-		return
-	}
-	if err = c.startFilters(); err != nil {
-		return
-	}
-	if err = c.startMetrics(); err != nil {
-		return
-	}
-	if err = c.startSinkers(); err != nil {
-		return
-	}
-
 	// new ticker with interval for sink metrics
 	ticker := time.NewTicker(time.Second * time.Duration(c.Interval))
 	go func() {
@@ -152,6 +142,24 @@ func (c *Config)Start(ctx context.Context) (err error){
 			err = c.handleMetrics()
 		}
 	}()
+
+	if err = c.startInput(); err != nil {
+		log.Println(err)
+		return
+	}
+	if err = c.startFilters(); err != nil {
+		log.Println(err)
+		return
+	}
+	if err = c.startMetrics(); err != nil {
+		log.Println(err)
+		return
+	}
+	if err = c.startSinkers(); err != nil {
+		log.Println(err)
+		return
+	}
+
 	return
 }
 

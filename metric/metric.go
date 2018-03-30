@@ -8,13 +8,14 @@ import (
 	"context"
 	"github.com/modeyang/LogCruiser/config/logevent"
 	"github.com/rcrowley/go-metrics"
+	"reflect"
 )
 
 type MetricConfig struct {
 	config.CommonConfig
-	MetricTmpl 	string 		`yaml:"metric"`
-	MetricValue interface{} `yaml:"value"`
-	FilterTmpls []string 	`yaml:"filters"`
+	MetricTmpl 	string 		`yaml:"metricTmpl"`
+	MetricValue interface{} `yaml:"metricValue"`
+	FilterTmpls []string 	`yaml:"filterTmpls,omitempty"`
 
 	MetricName 		*template.Template
 	FilterFuncs	   	[]*template.Template
@@ -34,6 +35,7 @@ func InitMetricConfig(ctx context.Context, raw *config.ConfigRaw) (config.TypeMe
 	conf := DefaultMetricConfig()
 	err := config.ReflectConfig(raw, &conf)
 	if err != nil {
+		log.Println(err)
 		return nil, err
 	}
 	tmpl, err := template.New(NAMESPACE).Parse(conf.MetricTmpl)
@@ -50,7 +52,7 @@ func InitMetricConfig(ctx context.Context, raw *config.ConfigRaw) (config.TypeMe
 		for i, tpl := range(conf.FilterTmpls) {
 			tmpl, err := template.New(string(i)).Parse(tpl)
 			if err != nil {
-				log.Fatalln(err)
+				log.Println(err)
 				return nil, err
 			}
 			conf.FilterFuncs = append(conf.FilterFuncs, tmpl)
@@ -68,17 +70,30 @@ func (mtr *MetricConfig)renderValue(event map[string]interface{})int64{
 	switch mtr.MetricValue.(type) {
 	case int:
 		return int64(mtr.MetricValue.(int))
+	case float64:
+		return int64(mtr.MetricValue.(float64))
 	case *template.Template:
 		value ,_:= config.RenderTemplate(mtr.MetricValue.(*template.Template), event)
 		if value != "" {
+			//if strings.Contains(value, ".") {
+			//	floatValue, err:= strconv.ParseFloat(value, 64)
+			//	if err != nil {
+			//		log.Println(err)
+			//		return 0
+			//	}
+			//	return floatValue
+			//}
 			intValue, err := strconv.ParseInt(value, 10, 64)
 			if err != nil {
-				panic(err)
+				log.Println(err)
+				return 0
 			}
 			return intValue
 		}
+	default:
+		log.Println(reflect.TypeOf(mtr.MetricValue))
 	}
-	panic(mtr.MetricValue)
+	return 0
 }
 
 func (mtr *MetricConfig)filter(event map[string]interface{})bool {

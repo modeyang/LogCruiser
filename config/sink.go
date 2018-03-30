@@ -3,6 +3,7 @@ package config
 import (
 	"context"
 	"errors"
+	"log"
 )
 
 type TypeSinkConfig interface {
@@ -11,9 +12,6 @@ type TypeSinkConfig interface {
 	Push(context.Context, MetricResult)error
 }
 
-type SinConfig struct {
-	CommonConfig
-}
 
 type SinkHandler func(context.Context, *ConfigRaw)(TypeSinkConfig, error)
 
@@ -40,6 +38,7 @@ func (c *Config)getSinkers()(sinkers []TypeSinkConfig, err error) {
 }
 
 func (c *Config)startSinkers()error {
+	log.Println("start sinkers")
 	sinkers, err := c.getSinkers()
 	if err != nil {
 		return err

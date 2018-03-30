@@ -3,45 +3,46 @@
 chsize: 1000
 interval: 3
 input:
-  - type: stdin
-    interval: 1
+  - type: file
+    path: test.log
+    position: 0
 
 filter:
   - type: split
+    splitField: "|"
+    removeFields: ["message"]
     fields:
       - from_host
       - idc
       - timestamp
       - status
       - request_time
-    field_split: "|"
-    remove_fields: ["message"]
   - type: convert
     fields:
-      status:
+      - field: status
         to: int
-        remove_if_fail: true
-      request_time:
-        to: int
+        removeIfFail: true
+      - field: request_time
+        to: float
         multiplier: 1000
         remove_if_fail: true
 metrics:
-  - metric: "access.qps/from_host={{.from_host}}"
+  - metricTmpl: "access.qps/from_host={{.from_host}}"
     type: counter
-    value: 1
-  - metric: "access.qps/status={{ .status }}"
+    metricValue: 1
+  - metricTmpl: "access.qps/idc={{.idc}}"
     type: counter
-    value: 1
-  - metric: "error.qps/status={{ .status }}"
+    metricValue: 1
+  - metricTmpl: "error.qps/host=ALL"
     type: counter
-    value: 1
-    filters:
-      - '{{ if .ge status 499 }}true{{ end }}'
-  - metric: "request.sum/from_host={{ .from_host }}"
+    metricValue: 1
+    filterTmpls:
+      - "{{ if ge .status 499 }}true{{ end }}"
+  - metricTmpl: "request.sum/from_host={{ .from_host }}"
     type: counter
-    value: "{{ .request_time }}"
+    metricValue: "{{ .request_time }}"
 
 output:
-  - type: stdout
+  - type: debug
 
 

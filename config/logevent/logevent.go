@@ -2,9 +2,6 @@ package logevent
 
 import (
 	"time"
-	"bytes"
-	"log"
-	"text/template"
 )
 
 type LogEvent struct {
@@ -22,7 +19,7 @@ func NewLogEvent(msg string)*LogEvent {
 		Timestamp: time.Now(),
 		Message: msg,
 		Tags: []string{},
-		Event:make(map[string]interface{}),
+		Event:map[string]interface{}{"message": msg},
 	}
 }
 

@@ -33,10 +33,12 @@ func contextWithOSSignal(parent context.Context, sig ...os.Signal) context.Conte
 func ReflectConfig(confraw *ConfigRaw, conf interface{}) (err error) {
 	data, err := json.Marshal(dyno.ConvertMapI2MapS(map[string]interface{}(*confraw)))
 	if err != nil {
+		log.Println(err)
 		return
 	}
 
 	if err = json.Unmarshal(data, conf); err != nil {
+		log.Println(err)
 		return
 	}
 

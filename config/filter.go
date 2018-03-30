@@ -11,9 +11,6 @@ type TypeFilterConfig interface {
 	Event(context.Context, logevent.LogEvent)logevent.LogEvent
 }
 
-type FilterConfig struct {
-	CommonConfig
-}
 
 // filter handler
 type FilterHandler func(ctx context.Context, raw *ConfigRaw)(TypeFilterConfig, error)
