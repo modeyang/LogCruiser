@@ -6,17 +6,36 @@ input:
   - type: file
     path: test.log
     position: 0
+  - type: kafka
+    topics:
+      - ops-https-accesslog
+    brokers: "kafka-10-100-4-129:9092,kafka-10-100-4-135:9092,kafka-10-100-4-136:9092,kafka-10-100-4-137:9092"
+    group: ops_https-slog-go
 
 filter:
   - type: split
-    splitField: "|"
+    splitField: "<-+>"
     removeFields: ["message"]
     fields:
-      - from_host
-      - idc
-      - timestamp
+      - remote_addr
+      - time_local
+      - request_method
+      - request_uri
       - status
+      - bytes_sent
+      - http_referer
+      - xforwardedfor
       - request_time
+      - upstream_response_time
+      - upstream_addr
+      - upstream_status
+      - host
+      - hostname
+      - http_user_agent
+      - ssl_protocol
+      - ssl_cipher
+      - ssl_session_id
+      - ssl_session_reused
   - type: convert
     fields:
       - field: status
@@ -44,5 +63,8 @@ metrics:
 
 output:
   - type: debug
+  - type: kafka
+    topic: https_metric_go
+    brokers: "kafka-10-100-4-129:9092,kafka-10-100-4-135:9092,kafka-10-100-4-136:9092,kafka-10-100-4-137:9092"
 
 

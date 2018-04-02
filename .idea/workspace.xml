@@ -2,49 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="889aebe4-8144-4f3d-8358-4f9932ad0738" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/filter/convert/convert.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/filter/convert/convert_test.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/filter/split/split.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/input/file/inputfile.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/module/module.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/sink/debugsink/debug.go" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/LogCruiser.iml" afterPath="$PROJECT_DIR$/.idea/LogCruiser.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/input/kafka/inputkafka.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/input/kafka/inputkafka_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/sink/kafka/kafka.go" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Log.yml" afterPath="$PROJECT_DIR$/Log.yml" />
-      <change beforePath="$PROJECT_DIR$/config/config.go" afterPath="$PROJECT_DIR$/config/config.go" />
-      <change beforePath="$PROJECT_DIR$/config/filter.go" afterPath="$PROJECT_DIR$/config/filter.go" />
-      <change beforePath="$PROJECT_DIR$/config/logevent/logevent.go" afterPath="$PROJECT_DIR$/config/logevent/logevent.go" />
-      <change beforePath="$PROJECT_DIR$/config/metric.go" afterPath="$PROJECT_DIR$/config/metric.go" />
-      <change beforePath="$PROJECT_DIR$/config/sink.go" afterPath="$PROJECT_DIR$/config/sink.go" />
-      <change beforePath="$PROJECT_DIR$/config/util.go" afterPath="$PROJECT_DIR$/config/util.go" />
-      <change beforePath="$PROJECT_DIR$/filter/Split.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/filter/base.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/glide.yaml" afterPath="$PROJECT_DIR$/glide.yaml" />
-      <change beforePath="$PROJECT_DIR$/main.go" afterPath="$PROJECT_DIR$/main.go" />
-      <change beforePath="$PROJECT_DIR$/metric/metric.go" afterPath="$PROJECT_DIR$/metric/metric.go" />
-      <change beforePath="$PROJECT_DIR$/metric/metric_test.go" afterPath="$PROJECT_DIR$/metric/metric_test.go" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/icza/dyno/dyno.go" afterPath="$PROJECT_DIR$/vendor/github.com/icza/dyno/dyno.go" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sync/AUTHORS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sync/CONTRIBUTING.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sync/CONTRIBUTORS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sync/LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sync/PATENTS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sync/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sync/codereview.cfg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sync/errgroup/errgroup.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sync/errgroup/errgroup_example_md5all_test.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sync/errgroup/errgroup_test.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sync/semaphore/semaphore.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sync/semaphore/semaphore_bench_test.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sync/semaphore/semaphore_example_test.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sync/semaphore/semaphore_test.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sync/singleflight/singleflight.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sync/singleflight/singleflight_test.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sync/syncmap/map.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sync/syncmap/map_bench_test.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sync/syncmap/map_reference_test.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sync/syncmap/map_test.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/cruiser_test.go" afterPath="$PROJECT_DIR$/cruiser_test.go" />
+      <change beforePath="$PROJECT_DIR$/module/module.go" afterPath="$PROJECT_DIR$/module/module.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,81 +19,105 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="metric.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/metric/metric.go">
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="118" column="24" lean-forward="false" selection-start-line="118" selection-start-column="24" selection-end-line="118" selection-end-column="24" />
+            <state relative-caret-position="306">
+              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="glide.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/glide.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/config.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="158" column="23" lean-forward="false" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
               <folding>
-                <element signature="e#16#208#0" expanded="true" />
-                <element signature="n#!!block;n#renderValue#0" expanded="true" />
-                <element signature="e#1905#1940#0" expanded="true" />
+                <element signature="e#16#261#0" expanded="true" />
+                <element signature="n#!!block;n#GetType#0" expanded="true" />
+                <element signature="n#!!block;n#LoadFromFile#0" expanded="true" />
+                <element signature="n#!!block;n#LoadFromYaml#0" expanded="true" />
+                <element signature="n#!!block;n#initConfig#0" expanded="true" />
+                <element signature="n#!!block;n#handleMetrics#0" expanded="true" />
+                <element signature="n#!!block;n#Wait#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="counter.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/github.com/rcrowley/go-metrics/counter.go">
+      <file leaf-file-name="inputkafka_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/input/kafka/inputkafka_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-604">
-              <caret line="19" column="53" lean-forward="false" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Log.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Log.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sink.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/sink.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="inputfile.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/input/file/inputfile.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+            <state relative-caret-position="351">
+              <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
               <folding>
-                <element signature="n#!!block;n#defaultFileInputConfig#0" expanded="true" />
-                <element signature="n#!!block;n#FileInputHandler#0" expanded="true" />
+                <element signature="e#15#111#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="message.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/github.com/Shopify/sarama/message.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inputkafka.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/input/kafka/inputkafka.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="58" column="4" lean-forward="false" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
+              <folding>
+                <element signature="e#15#232#0" expanded="true" />
+                <element signature="n#!!block;n#defaultInputConfig#0" expanded="true" />
                 <element signature="n#!!block;n#Source#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="convert.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/filter/convert/convert.go">
+      <file leaf-file-name="context.go" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Go/src/context/context.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-128">
-              <caret line="46" column="48" lean-forward="true" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+            <state relative-caret-position="195">
+              <caret line="336" column="20" lean-forward="false" selection-start-line="336" selection-start-column="20" selection-end-line="336" selection-end-column="20" />
               <folding>
-                <element signature="n#!!block;n#Event#0" expanded="true" />
+                <element signature="e#2463#2532#0" expanded="true" />
+                <element signature="e#2711#2783#0" expanded="true" />
+                <element signature="e#3762#3832#0" expanded="true" />
+                <element signature="n#!!block;n#WithCancel#0" expanded="true" />
+                <element signature="n#!!block;n#cancel#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kafka.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sink/kafka/kafka.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="58" column="44" lean-forward="true" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
+              <folding>
+                <element signature="e#15#148#0" expanded="true" />
+                <element signature="n#!!block;n#defaultSinkConfig#0" expanded="true" />
+                <element signature="n#!!block;n#Push#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,28 +126,8 @@
       <file leaf-file-name="convert_test.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/filter/convert/convert_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testing.go" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Go/src/testing/testing.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="621" column="0" lean-forward="false" selection-start-line="621" selection-start-column="0" selection-end-line="621" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tail_posix.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/github.com/hpcloud/tail/tail_posix.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="297">
+              <caret line="45" column="25" lean-forward="false" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -191,6 +159,7 @@
       <find>NewConvertItem</find>
       <find>tailFileSync</find>
       <find>Stopping</find>
+      <find>offset</find>
     </findStrings>
     <replaceStrings>
       <replace>MetricItemConfig</replace>
@@ -218,7 +187,6 @@
         <option value="$PROJECT_DIR$/../../Masterminds/glide/path/winbug.go" />
         <option value="$PROJECT_DIR$/metric/self_metric.go" />
         <option value="$PROJECT_DIR$/config/cruiser_test.go" />
-        <option value="$PROJECT_DIR$/cruiser_test.go" />
         <option value="$PROJECT_DIR$/config/input.go" />
         <option value="$PROJECT_DIR$/filter/split/Split.go" />
         <option value="$PROJECT_DIR$/config/filter.go" />
@@ -233,20 +201,24 @@
         <option value="$PROJECT_DIR$/filter/split/split.go" />
         <option value="$PROJECT_DIR$/config/logevent/logevent.go" />
         <option value="$PROJECT_DIR$/config/util.go" />
-        <option value="$PROJECT_DIR$/module/module.go" />
         <option value="$PROJECT_DIR$/config/sink.go" />
         <option value="$PROJECT_DIR$/filter/convert/convert.go" />
         <option value="$PROJECT_DIR$/glide.yaml" />
         <option value="$PROJECT_DIR$/errgroup/errgroup.go" />
         <option value="$PROJECT_DIR$/errgroup/errgroup_example_md5all_test.go" />
         <option value="$PROJECT_DIR$/errgroup/errgroup_test.go" />
-        <option value="$PROJECT_DIR$/config/config.go" />
         <option value="$PROJECT_DIR$/input/file/inputfile.go" />
         <option value="$PROJECT_DIR$/test.log" />
         <option value="$PROJECT_DIR$/filter/convert/convert_test.go" />
-        <option value="$PROJECT_DIR$/Log.yml" />
         <option value="$PROJECT_DIR$/metric/metric.go" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/cruiser_test.go" />
+        <option value="$PROJECT_DIR$/config/config.go" />
+        <option value="$PROJECT_DIR$/input/kafka/inputkafka.go" />
+        <option value="$PROJECT_DIR$/sink/kafka/kafka.go" />
+        <option value="$PROJECT_DIR$/Log.yml" />
+        <option value="$PROJECT_DIR$/module/module.go" />
+        <option value="$PROJECT_DIR$/input/kafka/inputkafka_test.go" />
       </list>
     </option>
   </component>
@@ -287,6 +259,33 @@
               <item name="LogCruiser" type="b2602c69:ProjectViewProjectNode" />
               <item name="LogCruiser" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="LogCruiser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LogCruiser" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LogCruiser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LogCruiser" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+              <item name="kafka" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LogCruiser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LogCruiser" type="462c0819:PsiDirectoryNode" />
+              <item name="sink" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LogCruiser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LogCruiser" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LogCruiser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LogCruiser" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -304,7 +303,7 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/go_path/src/github.com/modeyang/LogCruiser/glide.lock" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/go_path/src/github.com/modeyang/LogCruiser/config/util.go" />
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$" />
     <property name="GO_FMT" value="false" />
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
@@ -330,16 +329,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go">
-    <configuration name="go build github.com/modeyang/LogCruiser" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
-      <module name="LogCruiser" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/" />
-      <package value="github.com/modeyang/LogCruiser" />
-      <directory value="$PROJECT_DIR$/" />
-    </configuration>
+  <component name="RunManager" selected="Go Test.inputkafka_test.go">
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="LogCruiser" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -358,13 +348,23 @@
       <package value="github.com/modeyang/LogCruiser" />
       <filePath value="$PROJECT_DIR$/filter/convert/convert_test.go" />
     </configuration>
-    <configuration name="go test LogCruiser" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
+    <configuration name="cruiser_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
       <module name="LogCruiser" />
       <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
       <framework value="gotest" />
-      <kind value="DIRECTORY" />
+      <kind value="FILE" />
       <package value="github.com/modeyang/LogCruiser" />
-      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/cruiser_test.go" />
+    </configuration>
+    <configuration name="inputkafka_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
+      <module name="LogCruiser" />
+      <working_directory value="$PROJECT_DIR$/input/kafka" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <package value="github.com/modeyang/LogCruiser" />
+      <filePath value="$PROJECT_DIR$/input/kafka/inputkafka_test.go" />
     </configuration>
     <configuration name="metric_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
       <module name="LogCruiser" />
@@ -377,18 +377,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Go Build.go build main.go" />
-      <item index="1" class="java.lang.String" itemvalue="Go Test.go test LogCruiser" />
-      <item index="2" class="java.lang.String" itemvalue="Go Build.go build github.com/modeyang/LogCruiser" />
-      <item index="3" class="java.lang.String" itemvalue="Go Test.metric_test.go" />
-      <item index="4" class="java.lang.String" itemvalue="Go Test.convert_test.go" />
+      <item index="1" class="java.lang.String" itemvalue="Go Test.metric_test.go" />
+      <item index="2" class="java.lang.String" itemvalue="Go Test.convert_test.go" />
+      <item index="3" class="java.lang.String" itemvalue="Go Test.cruiser_test.go" />
+      <item index="4" class="java.lang.String" itemvalue="Go Test.inputkafka_test.go" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Go Build.go build main.go" />
-        <item index="1" class="java.lang.String" itemvalue="Go Test.convert_test.go" />
-        <item index="2" class="java.lang.String" itemvalue="Go Test.metric_test.go" />
-        <item index="3" class="java.lang.String" itemvalue="Go Build.go build github.com/modeyang/LogCruiser" />
-        <item index="4" class="java.lang.String" itemvalue="Go Test.go test LogCruiser" />
+        <item index="0" class="java.lang.String" itemvalue="Go Test.inputkafka_test.go" />
+        <item index="1" class="java.lang.String" itemvalue="Go Test.cruiser_test.go" />
+        <item index="2" class="java.lang.String" itemvalue="Go Build.go build main.go" />
+        <item index="3" class="java.lang.String" itemvalue="Go Test.convert_test.go" />
+        <item index="4" class="java.lang.String" itemvalue="Go Test.metric_test.go" />
       </list>
     </recent_temporary>
   </component>
@@ -396,18 +396,6 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TestHistory">
-    <history-entry file="convert_test_go - 2018.03.30 at 16h 03m 05s.xml">
-      <configuration name="convert_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="convert_test_go - 2018.03.30 at 16h 11m 56s.xml">
-      <configuration name="convert_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="convert_test_go - 2018.03.30 at 16h 13m 29s.xml">
-      <configuration name="convert_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="convert_test_go - 2018.03.30 at 16h 23m 14s.xml">
-      <configuration name="convert_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="convert_test_go - 2018.03.30 at 16h 23m 58s.xml">
       <configuration name="convert_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
@@ -425,6 +413,18 @@
     </history-entry>
     <history-entry file="convert_test_go - 2018.03.30 at 18h 48m 14s.xml">
       <configuration name="convert_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="cruiser_test_go - 2018.04.02 at 16h 08m 39s.xml">
+      <configuration name="cruiser_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="cruiser_test_go - 2018.04.02 at 16h 09m 24s.xml">
+      <configuration name="cruiser_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="cruiser_test_go - 2018.04.02 at 16h 11m 22s.xml">
+      <configuration name="cruiser_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="cruiser_test_go - 2018.04.02 at 16h 12m 47s.xml">
+      <configuration name="cruiser_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -481,241 +481,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Go/src/sync/rwmutex.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/time/time.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="420" column="14" lean-forward="false" selection-start-line="420" selection-start-column="14" selection-end-line="420" selection-end-column="14" />
-          <folding>
-            <element signature="n#!!block;n#Second#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/github.com/rcrowley/go-metrics/gauge.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-307">
-          <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/flag/flag.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="717" column="0" lean-forward="true" selection-start-line="717" selection-start-column="0" selection-end-line="717" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#String#9" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/github.com/rcrowley/go-metrics/registry.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="83" column="17" lean-forward="false" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/os/file_windows.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-94">
-          <caret line="170" column="18" lean-forward="false" selection-start-line="170" selection-start-column="18" selection-end-line="170" selection-end-column="18" />
-          <folding>
-            <element signature="n#!!block;n#OpenFile#0" expanded="false" />
-            <element signature="n#!!block;n#Close#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/bufio/bufio.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="353" column="56" lean-forward="false" selection-start-line="353" selection-start-column="48" selection-end-line="353" selection-end-column="56" />
-          <folding>
-            <element signature="n#!!block;n#NewReader#0" expanded="false" />
-            <element signature="n#!!block;n#ReadLine#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/filter/base.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/bufio/scan.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="225" column="72" lean-forward="false" selection-start-line="225" selection-start-column="72" selection-end-line="225" selection-end-column="72" />
-          <folding>
-            <element signature="n#!!block;n#NewScanner#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/runtime/proc.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="162" column="44" lean-forward="false" selection-start-line="162" selection-start-column="44" selection-end-line="162" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/runtime/alg.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/reflect/value.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="2094" column="5" lean-forward="false" selection-start-line="2094" selection-start-column="5" selection-end-line="2094" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!block;n#ValueOf#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sink/debugsink/debug.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="82" lean-forward="true" selection-start-line="14" selection-start-column="82" selection-end-line="14" selection-end-column="82" />
-          <folding>
-            <element signature="n#!!block;n#Push#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/filter.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="47" column="32" lean-forward="false" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
-          <folding>
-            <element signature="e#16#97#0" expanded="false" />
-            <element signature="n#!!block;n#RegisterFilterHandler#0" expanded="false" />
-            <element signature="n#!!block;n#getFilters#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/text/template/template.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-          <folding>
-            <element signature="n#!!block;n#New#0" expanded="false" />
-            <element signature="n#!!block;n#New#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/metric/metric_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="46" lean-forward="false" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-          <folding>
-            <element signature="e#16#70#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/filter/split/split.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="38" column="46" lean-forward="false" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
-          <folding>
-            <element signature="e#15#138#0" expanded="false" />
-            <element signature="n#!!block;n#defaultFilterConfig#0" expanded="false" />
-            <element signature="n#!!block;n#SplitFilterHandler#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/strconv/atoi.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="155" column="5" lean-forward="false" selection-start-line="155" selection-start-column="5" selection-end-line="155" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!block;n#ParseInt#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/github.com/icza/dyno/dyno.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="528" column="22" lean-forward="false" selection-start-line="528" selection-start-column="22" selection-end-line="528" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/util.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="33" column="84" lean-forward="false" selection-start-line="33" selection-start-column="84" selection-end-line="33" selection-end-column="84" />
-          <folding>
-            <element signature="e#16#141#0" expanded="false" />
-            <element signature="n#!!block;n#contextWithOSSignal#0" expanded="false" />
-            <element signature="n#!!block;n#formatReflect#0" expanded="false" />
-            <element signature="n#!!block;n#RenderTemplate#0" expanded="false" />
-            <element signature="n#!!block;n#Map2String#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/module.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#298#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/logevent/logevent.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-          <folding>
-            <element signature="n#!!block;n#NewLogEvent#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/glide.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/context/context.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="424" column="0" lean-forward="false" selection-start-line="424" selection-start-column="0" selection-end-line="424" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/golang.org/x/sync/errgroup/errgroup.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -746,14 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/metric.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/errgroup/errgroup_example_md5all_test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -768,40 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/input.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#getInputs#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#261#0" expanded="true" />
-            <element signature="n#!!block;n#GetType#0" expanded="true" />
-            <element signature="n#!!block;n#LoadFromFile#0" expanded="true" />
-            <element signature="n#!!block;n#LoadFromYaml#0" expanded="true" />
-            <element signature="n#!!block;n#initConfig#0" expanded="true" />
-            <element signature="n#!!block;n#Start#0" expanded="true" />
-            <element signature="n#!!block;n#Wait#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="39" column="18" lean-forward="false" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -915,34 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/filter/convert/convert_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/sink.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input/file/inputfile.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-          <folding>
-            <element signature="n#!!block;n#defaultFileInputConfig#0" expanded="true" />
-            <element signature="n#!!block;n#FileInputHandler#0" expanded="true" />
-            <element signature="n#!!block;n#Source#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/filter/convert/convert.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-128">
@@ -961,11 +656,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Log.yml">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cruiser_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+          <folding>
+            <element signature="n#!!block;n#Test_Yaml#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/rcrowley/go-metrics/counter.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#GetOrRegisterCounter#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -981,19 +696,326 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/github.com/rcrowley/go-metrics/counter.go">
+    <entry file="file://$PROJECT_DIR$/config/util.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-604">
-          <caret line="19" column="53" lean-forward="false" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+        <state relative-caret-position="442">
+          <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!block;n#contextWithOSSignal#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/Shopify/sarama/offset_commit_request.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="e#1469#1487#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/Shopify/sarama/client.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="85" column="56" lean-forward="false" selection-start-line="85" selection-start-column="56" selection-end-line="85" selection-end-column="56" />
+          <folding>
+            <element signature="e#3334#3410#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/fmt/print.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="208" column="0" lean-forward="true" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#Sprintf#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/strings/strings.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="282" column="5" lean-forward="false" selection-start-line="282" selection-start-column="5" selection-end-line="282" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!block;n#Split#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/logevent/logevent.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!block;n#NewLogEvent#0" expanded="true" />
+            <element signature="n#!!block;n#AddTag#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/Shopify/sarama/consumer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/bsm/sarama-cluster/config.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/bsm/sarama-cluster/consumer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="174" column="19" lean-forward="false" selection-start-line="174" selection-start-column="19" selection-end-line="174" selection-end-column="19" />
+          <folding>
+            <element signature="n#!!block;n#NewConsumer#0" expanded="true" />
+            <element signature="n#!!block;n#Messages#0" expanded="true" />
+            <element signature="n#!!block;n#Notifications#0" expanded="true" />
+            <element signature="n#!!block;n#CommitOffsets#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sink/debugsink/debug.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="e#19#88#0" expanded="true" />
+            <element signature="n#!!block;n#Push#0" expanded="true" />
+            <element signature="n#!!block;n#InitSinkHandler#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/file/inputfile.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="50" column="4" lean-forward="false" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
+          <folding>
+            <element signature="e#14#174#0" expanded="true" />
+            <element signature="n#!!block;n#defaultFileInputConfig#0" expanded="true" />
+            <element signature="n#!!block;n#FileInputHandler#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/Shopify/sarama/sync_producer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!block;n#SendMessage#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/metric.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!block;n#startMetrics#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/sink.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="39" column="16" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding>
+            <element signature="n#!!block;n#RegisterSinkHandler#0" expanded="true" />
+            <element signature="n#!!block;n#startSinkers#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/encoding/json/encode.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="158" column="5" lean-forward="false" selection-start-line="158" selection-start-column="5" selection-end-line="158" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!block;n#Marshal#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/Shopify/sarama/utils.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="73" column="23" lean-forward="false" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!block;n#Encode#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Log.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/Shopify/sarama/async_producer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="141" column="4" lean-forward="true" selection-start-line="141" selection-start-column="4" selection-end-line="141" selection-end-column="4" />
+          <folding>
+            <element signature="e#3984#4020#0" expanded="true" />
+            <element signature="e#4143#4213#0" expanded="true" />
+            <element signature="e#4266#4330#0" expanded="true" />
+            <element signature="e#4403#4473#0" expanded="true" />
+            <element signature="e#5107#5180#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/module.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#16#399#0" expanded="true" />
+            <element signature="n#!!block;n#InitModule#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sink/kafka/kafka.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="58" column="44" lean-forward="true" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
+          <folding>
+            <element signature="e#15#148#0" expanded="true" />
+            <element signature="n#!!block;n#defaultSinkConfig#0" expanded="true" />
+            <element signature="n#!!block;n#Push#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filter/convert/convert_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="45" column="25" lean-forward="false" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/context/context.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="336" column="20" lean-forward="false" selection-start-line="336" selection-start-column="20" selection-end-line="336" selection-end-column="20" />
+          <folding>
+            <element signature="e#2463#2532#0" expanded="true" />
+            <element signature="e#2711#2783#0" expanded="true" />
+            <element signature="e#3762#3832#0" expanded="true" />
+            <element signature="n#!!block;n#WithCancel#0" expanded="true" />
+            <element signature="n#!!block;n#cancel#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/time/sleep.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="82" column="5" lean-forward="false" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!block;n#NewTimer#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="158" column="23" lean-forward="false" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
+          <folding>
+            <element signature="e#16#261#0" expanded="true" />
+            <element signature="n#!!block;n#GetType#0" expanded="true" />
+            <element signature="n#!!block;n#LoadFromFile#0" expanded="true" />
+            <element signature="n#!!block;n#LoadFromYaml#0" expanded="true" />
+            <element signature="n#!!block;n#initConfig#0" expanded="true" />
+            <element signature="n#!!block;n#handleMetrics#0" expanded="true" />
+            <element signature="n#!!block;n#Wait#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/Shopify/sarama/message.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/Shopify/sarama/mockbroker.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/glide.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/kafka/inputkafka_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+          <folding>
+            <element signature="e#15#111#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/input.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!block;n#getInputs#0" expanded="true" />
+            <element signature="n#!!block;n#startInput#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/kafka/inputkafka.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="58" column="4" lean-forward="false" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
+          <folding>
+            <element signature="e#15#232#0" expanded="true" />
+            <element signature="n#!!block;n#defaultInputConfig#0" expanded="true" />
+            <element signature="n#!!block;n#Source#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
