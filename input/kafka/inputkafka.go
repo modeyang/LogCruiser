@@ -59,6 +59,7 @@ func KafkaInputHandler(ctx context.Context, raw *config.ConfigRaw)(config.TypeIn
 	}
 	consumer, err := cluster.NewConsumer(strings.Split(conf.Brokers, ","), conf.Group, conf.Topics, kcfg)
 	if err != nil {
+		log.Println(err)
 		return nil, err
 	}
 	conf.Consumer = consumer

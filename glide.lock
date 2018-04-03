@@ -13,4 +13,6 @@ imports:
   version: 95cd2b9c79aa5e72ab0bc69b7ccc2be15bf850f6
 - name: gopkg.in/yaml.v2
   version: 287cf08546ab5e7e37d55a84f7ed3fd1db036de5
+- name: github.com/hpcloud/tail
+  version: v1.0.0
 testImports: []
