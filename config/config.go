@@ -137,6 +137,7 @@ func (c *Config)Start(ctx context.Context) (err error){
 	c.eg, c.ctx = errgroup.WithContext(ctx)
 	// new ticker with interval for sink metrics
 	ticker := time.NewTicker(time.Second * time.Duration(c.Interval))
+	defer ticker.Stop()
 	go func() {
 		for _ = range(ticker.C) {
 			err = c.handleMetrics()
