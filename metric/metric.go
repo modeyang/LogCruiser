@@ -77,7 +77,7 @@ func (mtr *MetricConfig)renderValue(event map[string]interface{})int64{
 		return int64(mtr.MetricValue.(float64))
 	case *template.Template:
 		value ,_:= config.RenderTemplate(mtr.MetricValue.(*template.Template), event)
-		if value != ERROR_STRING {
+		if value != ERROR_STRING && len(value) > 0 {
 			//if strings.Contains(value, ".") {
 			//	floatValue, err:= strconv.ParseFloat(value, 64)
 			//	if err != nil {

@@ -18,6 +18,7 @@ type MetricResult struct {
 	Data 	  map[string]int64 	`json:"data"`
 }
 
+var LogProcessMetric = "log_process.count"
 var listMetricHanlder = []HandlerMetric{}
 
 type HandlerMetric func(ctx context.Context, raws *ConfigRaw)(TypeMetricConfig, error)
@@ -42,6 +43,10 @@ func (c *Config)getMetrics()(metrics []TypeMetricConfig, err error) {
 	return
 }
 
+func (c *Config)handleSelfMetric(){
+	metrics.GetOrRegisterCounter(LogProcessMetric, c.selfRegistry).Inc(1)
+}
+
 func (c *Config)startMetrics()(err error){
 	log.Println("start metrics")
 	allMetrics, err := c.getMetrics()
@@ -54,6 +59,7 @@ func (c *Config)startMetrics()(err error){
 			case <- c.ctx.Done():
 				return nil
 			case event := <- c.chInMetric:
+				c.handleSelfMetric()
 				for _, metricItem := range(allMetrics) {
 					metricItem.Calculate(c.ctx, c.registry, event)
 				}

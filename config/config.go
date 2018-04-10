@@ -60,7 +60,7 @@ type MsgChan chan logevent.LogEvent
 type MetricChan chan MetricResult
 
 var defaultConfig = Config{
-	ChanSize: 100,
+	ChanSize: 1000,
 	Interval: 3,
 	SinkTimeRange: 60,
 }
@@ -127,6 +127,15 @@ func (c *Config) handleMetrics()error{
 	timestamp = timestamp - timestamp % c.SinkTimeRange
 	if len(rawMetrics) > 0 {
 		c.chInSinker <- MetricResult{Timestamp: timestamp, Data: rawMetrics}
+	}
+
+	selfMetrics := map[string]int64{}
+	for k, v := range(c.selfRegistry.GetAll()) {
+		selfMetrics[k] = v["count"].(int64)
+	}
+	c.selfRegistry.UnregisterAll()
+	if len(selfMetrics) > 0 {
+		log.Println(selfMetrics)
 	}
 	return nil
 }
