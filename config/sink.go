@@ -41,21 +41,21 @@ func (c *Config)startSinkers()error {
 	log.Println("start sinkers")
 	sinkers, err := c.getSinkers()
 	if err != nil {
+		log.Println(err)
 		return err
 	}
-	for {
-		select {
-		case <- c.ctx.Done():
-			return nil
-		case metricResult := <- c.chInSinker:
-			for _, sink := range(sinkers) {
-				func(s TypeSinkConfig)error{
-					c.eg.Go(func() error {
-						return s.Push(c.ctx, metricResult)
-					})
-					return nil
-				}(sink)
+	c.eg.Go(func() error {
+		for {
+			select {
+			case <- c.ctx.Done():
+				return nil
+			case metricResult := <- c.chInSinker:
+				for _, sink := range(sinkers) {
+					sink.Push(c.ctx, metricResult)
+				}
 			}
 		}
-	}
+
+	})
+	return nil
 }

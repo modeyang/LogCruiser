@@ -46,7 +46,7 @@ func (c *Config) startInput()(error) {
 		return err
 	}
 	for _, input := range(inputs) {
-		func(input TypeInputConfig) {
+		go func(input TypeInputConfig) {
 			c.eg.Go(func() error {
 				return input.Source(c.ctx, c.chInFilter)
 			})

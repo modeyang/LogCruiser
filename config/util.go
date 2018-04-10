@@ -76,7 +76,7 @@ func RenderTemplate(tmpl *template.Template, event map[string]interface{}) (stri
 	var tpl bytes.Buffer
 	err := tmpl.Execute(&tpl, event)
 	if err != nil {
-		log.Fatalln(err)
+		log.Println(err)
 		return "", err
 	}
 	return tpl.String(), nil

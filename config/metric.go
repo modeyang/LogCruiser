@@ -5,6 +5,7 @@ import (
 	"github.com/modeyang/LogCruiser/config/logevent"
 	"errors"
 	"github.com/rcrowley/go-metrics"
+	"log"
 )
 
 type TypeMetricConfig interface {
@@ -13,7 +14,7 @@ type TypeMetricConfig interface {
 }
 
 type MetricResult struct {
-	Timestamp int 				`json:"timestamp"`
+	Timestamp int64 			`json:"timestamp"`
 	Data 	  map[string]int64 	`json:"data"`
 }
 
@@ -42,28 +43,22 @@ func (c *Config)getMetrics()(metrics []TypeMetricConfig, err error) {
 }
 
 func (c *Config)startMetrics()(err error){
+	log.Println("start metrics")
 	allMetrics, err := c.getMetrics()
 	if err != nil {
 		return err
 	}
-	go func() error {
+	c.eg.Go(func() error {
 		for {
 			select {
 			case <- c.ctx.Done():
 				return nil
 			case event := <- c.chInMetric:
 				for _, metricItem := range(allMetrics) {
-					func(item TypeMetricConfig)error{
-						c.eg.Go(func() error {
-							return item.Calculate(c.ctx, c.registry, event)
-						})
-						return nil
-					}(metricItem)
-
+					metricItem.Calculate(c.ctx, c.registry, event)
 				}
 			}
 		}
-
-	}()
+	})
 	return nil
 }

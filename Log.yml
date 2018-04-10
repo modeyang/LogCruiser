@@ -4,13 +4,13 @@ chsize: 1000
 interval: 3
 input:
   - type: file
-    path: test.log
+    path: https.log
     position: 0
-  - type: kafka
-    topics:
-      - ops-https-accesslog
-    brokers: "kafka-10-100-4-129:9092,kafka-10-100-4-135:9092,kafka-10-100-4-136:9092,kafka-10-100-4-137:9092"
-    group: ops_https-slog-go
+#  - type: kafka
+#    topics:
+#      - ops-https-accesslog
+#    brokers: "kafka-10-100-4-129:9092,kafka-10-100-4-135:9092,kafka-10-100-4-136:9092,kafka-10-100-4-137:9092"
+#    group: ops_https-slog-go
 
 filter:
   - type: split
@@ -46,10 +46,7 @@ filter:
         multiplier: 1000
         remove_if_fail: true
 metrics:
-  - metricTmpl: "access.qps/from_host={{.from_host}}"
-    type: counter
-    metricValue: 1
-  - metricTmpl: "access.qps/idc={{.idc}}"
+  - metricTmpl: "access.qps/from_host={{.hostname}}"
     type: counter
     metricValue: 1
   - metricTmpl: "error.qps/host=ALL"
@@ -57,14 +54,14 @@ metrics:
     metricValue: 1
     filterTmpls:
       - "{{ if ge .status 499 }}true{{ end }}"
-  - metricTmpl: "request.sum/from_host={{ .from_host }}"
+  - metricTmpl: "request.sum/from_host={{ .hostname }}"
     type: counter
     metricValue: "{{ .request_time }}"
 
-output:
+sink:
   - type: debug
-  - type: kafka
-    topic: https_metric_go
-    brokers: "kafka-10-100-4-129:9092,kafka-10-100-4-135:9092,kafka-10-100-4-136:9092,kafka-10-100-4-137:9092"
+#  - type: kafka
+#    topic: https_metric_go
+#    brokers: "kafka-10-100-4-129:9092,kafka-10-100-4-135:9092,kafka-10-100-4-136:9092,kafka-10-100-4-137:9092"
 
 

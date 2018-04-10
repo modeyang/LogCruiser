@@ -1,18 +1,15 @@
-package kafka
+package debugsink
 
 import (
 	"testing"
+	"time"
 	"context"
 	config2 "github.com/modeyang/LogCruiser/config"
-	"time"
-	"log"
 )
 
-func TestKafkaSink(T *testing.T){
+func TestDebug(T *testing.T) {
 	config := config2.ConfigRaw {
 		"type": "kafka",
-		"topic": "test_go",
-		"brokers": "10.100.4.149:9092",
 	}
 	ctx , cancel := context.WithCancel(context.Background())
 	defer cancel()
@@ -30,7 +27,6 @@ func TestKafkaSink(T *testing.T){
 			"error.qps/host=All": 1,
 		},
 	}
-	log.Println(metric)
 	err = sinker.Push(ctx, metric)
 	if err != nil {
 		T.Error(err)

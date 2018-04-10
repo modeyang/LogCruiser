@@ -4,6 +4,7 @@ import (
 	"context"
 	"github.com/modeyang/LogCruiser/config/logevent"
 	"errors"
+	"log"
 )
 
 type TypeFilterConfig interface {
@@ -38,6 +39,7 @@ func (c *Config) getFilters()(filters []TypeFilterConfig, err error) {
 }
 
 func (c *Config)startFilters() (err error) {
+	log.Print("start filter")
 	filters, err := c.getFilters()
 	if err != nil {
 		return

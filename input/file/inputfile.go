@@ -55,13 +55,13 @@ func (input *InputConfig)Source(ctx context.Context, msgChan chan <- logevent.Lo
 		case <- ctx.Done():
 			return nil
 		case line := <- t.Lines:
-			if line != nil {
+			if line != nil && len(line.Text) > 0 {
 				// for windows line "\r\n"
 				msgChan <- *logevent.NewLogEvent(strings.TrimRight(line.Text, "\r"))
 			}
 		}
 	}
-	//t.Wait()
+	t.Wait()
 	return nil
 }
 

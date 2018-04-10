@@ -9,7 +9,10 @@ import (
 	"github.com/modeyang/LogCruiser/config/logevent"
 	"github.com/rcrowley/go-metrics"
 	"reflect"
+	"strings"
 )
+
+const ERROR_STRING = "<no value>"
 
 type MetricConfig struct {
 	config.CommonConfig
@@ -74,7 +77,7 @@ func (mtr *MetricConfig)renderValue(event map[string]interface{})int64{
 		return int64(mtr.MetricValue.(float64))
 	case *template.Template:
 		value ,_:= config.RenderTemplate(mtr.MetricValue.(*template.Template), event)
-		if value != "" {
+		if value != ERROR_STRING {
 			//if strings.Contains(value, ".") {
 			//	floatValue, err:= strconv.ParseFloat(value, 64)
 			//	if err != nil {
@@ -83,6 +86,14 @@ func (mtr *MetricConfig)renderValue(event map[string]interface{})int64{
 			//	}
 			//	return floatValue
 			//}
+			if strings.Contains(value, ".") {
+				floatValue, err := strconv.ParseFloat(value, 64)
+				if err != nil {
+					log.Println(err)
+					return 0
+				}
+				return int64(floatValue)
+			}
 			intValue, err := strconv.ParseInt(value, 10, 64)
 			if err != nil {
 				log.Println(err)
@@ -108,7 +119,7 @@ func (mtr *MetricConfig)filter(event map[string]interface{})bool {
 
 func (mtr *MetricConfig)Calculate(ctx context.Context, registry metrics.Registry, event logevent.LogEvent)error {
 	metric_name, err := mtr.render(event.Event)
-	if err != nil {
+	if err != nil || metric_name == ERROR_STRING {
 		log.Printf("render template %v failed\n", mtr.MetricTmpl)
 		return nil
 	}

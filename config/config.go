@@ -123,10 +123,9 @@ func (c *Config) handleMetrics()error{
 			rawMetrics[k] = c.(int64)
 		}
 	}
-	now := time.Now().Second()
-	timestamp := now - now % int(c.SinkTimeRange)
+	timestamp := time.Now().Unix()
+	timestamp = timestamp - timestamp % c.SinkTimeRange
 	if len(rawMetrics) > 0 {
-		log.Println(rawMetrics)
 		c.chInSinker <- MetricResult{Timestamp: timestamp, Data: rawMetrics}
 	}
 	return nil
@@ -137,7 +136,6 @@ func (c *Config)Start(ctx context.Context) (err error){
 	c.eg, c.ctx = errgroup.WithContext(ctx)
 	// new ticker with interval for sink metrics
 	ticker := time.NewTicker(time.Second * time.Duration(c.Interval))
-	defer ticker.Stop()
 	go func() {
 		for _ = range(ticker.C) {
 			err = c.handleMetrics()
