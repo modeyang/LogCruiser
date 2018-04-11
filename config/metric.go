@@ -43,8 +43,8 @@ func (c *Config)getMetrics()(metrics []TypeMetricConfig, err error) {
 	return
 }
 
-func (c *Config)handleSelfMetric(){
-	metrics.GetOrRegisterCounter(LogProcessMetric, c.selfRegistry).Inc(1)
+func (c *Config)handleSelfMetric(name string){
+	metrics.GetOrRegisterCounter(name, c.selfRegistry).Inc(1)
 }
 
 func (c *Config)startMetrics()(err error){
@@ -59,7 +59,7 @@ func (c *Config)startMetrics()(err error){
 			case <- c.ctx.Done():
 				return nil
 			case event := <- c.chInMetric:
-				c.handleSelfMetric()
+				c.handleSelfMetric(LogProcessMetric)
 				for _, metricItem := range(allMetrics) {
 					metricItem.Calculate(c.ctx, c.registry, event)
 				}
