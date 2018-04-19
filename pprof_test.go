@@ -9,6 +9,7 @@ import (
 	"os"
 	"runtime/pprof"
 	"sync"
+	"time"
 )
 
 func counter() {
@@ -62,4 +63,5 @@ func TestPProf(T *testing.T) {
 	wg.Wait()
 	log.Println("end..")
 
+	time.Sleep(1 * time.Second)
 }
