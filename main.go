@@ -10,7 +10,7 @@ import (
 	"github.com/modeyang/LogCruiser/config"
 	"github.com/modeyang/LogCruiser/module"
 	"runtime/pprof"
-	tpprof "net/http/pprof"
+	_ "net/http/pprof"
 	"net/http"
 )
 
@@ -35,12 +35,6 @@ func init() {
 }
 
 func initHttpProfile() {
-	http.HandleFunc("/debug/pprof/", tpprof.Index)
-	http.HandleFunc("/debug/pprof/cmdline", tpprof.Cmdline)
-	http.HandleFunc("/debug/pprof/profile", tpprof.Profile)
-	http.HandleFunc("/debug/pprof/symbol", tpprof.Symbol)
-	http.HandleFunc("/debug/pprof/trace", tpprof.Trace)
-	http.ListenAndServe("0.0.0.0:6100", nil)
 }
 
 func main() {
@@ -74,7 +68,7 @@ func main() {
 		return
 	}
 
-	go initHttpProfile()
+	go log.Println(http.ListenAndServe("0.0.0.0:6100", nil))
 	log.Println("wait end ...")
 	if err = conf.Wait(); err != nil {
 		return
