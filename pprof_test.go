@@ -10,12 +10,13 @@ import (
 	"runtime/pprof"
 	"sync"
 	"time"
+	_ "net/http/pprof"
 )
 
 func counter() {
 	list := []int{1}
 	c := 1
-	for i := 0; i < 100; i++ {
+	for i := 0; i < 100000; i++ {
 		length := httpGet()
 		c += length
 		list = append(list, c)
@@ -45,8 +46,21 @@ func worker(wg *sync.WaitGroup) {
 	wg.Done()
 }
 
+func testHttpProfile() {
+	//http.HandleFunc("/debug/pprof/", tpprof.Index)
+	//http.HandleFunc("/debug/pprof/cmdline", tpprof.Cmdline)
+	//http.HandleFunc("/debug/pprof/profile", tpprof.Profile)
+	//http.HandleFunc("/debug/pprof/symbol", tpprof.Symbol)
+	//http.HandleFunc("/debug/pprof/trace", tpprof.Trace)
+	log.Println(http.ListenAndServe("0.0.0.0:6100", nil))
+}
 
 func TestPProf(T *testing.T) {
+	defer func() {
+		if err := recover(); err != nil {
+			fmt.Println(err)
+		}
+	}()
 	profile := "test.prof"
 	f, err := os.Create(profile)
 	if err != nil {
@@ -54,14 +68,15 @@ func TestPProf(T *testing.T) {
 	}
 	pprof.StartCPUProfile(f)
 	defer pprof.StopCPUProfile()
+	go testHttpProfile()
 
 	var wg sync.WaitGroup
-	wg.Add(1)
-	for i:=0; i<100; i++ {
+	wg.Add(10)
+	for i:=0; i<10; i++ {
 		go worker(&wg)
 	}
 	wg.Wait()
 	log.Println("end..")
 
-	time.Sleep(1 * time.Second)
+	//time.Sleep(60 * time.Second)
 }
