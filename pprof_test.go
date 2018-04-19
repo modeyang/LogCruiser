@@ -9,23 +9,26 @@ import (
 	"os"
 	"runtime/pprof"
 	"sync"
-	"time"
 	_ "net/http/pprof"
 )
 
 func counter() {
 	list := []int{1}
 	c := 1
-	for i := 0; i < 100000; i++ {
-		length := httpGet()
-		c += length
+	lenChan := make(chan int, 1)
+	for i := 0; i < 100; i++ {
+		go httpGet(lenChan)
+		select {
+		case length := <- lenChan:
+			c += length
+		}
 		list = append(list, c)
 	}
 	fmt.Println(c)
 	fmt.Println(list[0])
 }
 
-func httpGet() int{
+func httpGet(lenChan chan int) int{
 	resp, err := http.Get("http://www.163.com")
 	if err != nil {
 		log.Println(err)
@@ -38,6 +41,7 @@ func httpGet() int{
 		log.Println(err)
 		return 0
 	}
+	lenChan <- len(body)
 	return len(body)
 }
 
