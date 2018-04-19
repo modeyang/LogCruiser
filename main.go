@@ -6,14 +6,18 @@ import (
 	"flag"
 	"fmt"
 	"context"
-	"github.com/modeyang/LogCruiser/config"
 	"log"
+	"github.com/modeyang/LogCruiser/config"
 	"github.com/modeyang/LogCruiser/module"
+	"runtime/pprof"
+	tpprof "net/http/pprof"
+	"net/http"
 )
 
 var (
 	confFile 	string
-	help 	bool
+	help 		bool
+	cpuProfile 	string
 )
 
 func usage() {
@@ -27,6 +31,16 @@ func init() {
 	flag.Usage = usage
 	flag.StringVar(&confFile, "c", "Log.yml", "config file")
 	flag.BoolVar(&help, "h", false, "tool help")
+	flag.StringVar(&cpuProfile, "cpuprofile", "", "write cpu profile to file")
+}
+
+func initHttpProfile() {
+	http.HandleFunc("/debug/pprof/", tpprof.Index)
+	http.HandleFunc("/debug/pprof/cmdline", tpprof.Cmdline)
+	http.HandleFunc("/debug/pprof/profile", tpprof.Profile)
+	http.HandleFunc("/debug/pprof/symbol", tpprof.Symbol)
+	http.HandleFunc("/debug/pprof/trace", tpprof.Trace)
+	http.ListenAndServe("0.0.0.0:6100", nil)
 }
 
 func main() {
@@ -35,6 +49,14 @@ func main() {
 	flag.Parse()
 	if help {
 		flag.Usage()
+	}
+	if cpuProfile != "" {
+		f, err := os.Create(cpuProfile)
+		if err != nil {
+			log.Fatal(err)
+		}
+		pprof.StartCPUProfile(f)
+		defer pprof.StopCPUProfile()
 	}
 	conf, err := config.LoadFromFile(confFile)
 	if err != nil {
@@ -52,6 +74,7 @@ func main() {
 		return
 	}
 
+	go initHttpProfile()
 	log.Println("wait end ...")
 	if err = conf.Wait(); err != nil {
 		return
