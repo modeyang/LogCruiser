@@ -18,6 +18,7 @@ var (
 	confFile 	string
 	help 		bool
 	cpuProfile 	string
+	port 		int
 )
 
 func usage() {
@@ -32,9 +33,14 @@ func init() {
 	flag.StringVar(&confFile, "c", "Log.yml", "config file")
 	flag.BoolVar(&help, "h", false, "tool help")
 	flag.StringVar(&cpuProfile, "cpuprofile", "", "write cpu profile to file")
+	flag.IntVar(&port, "port", 6100, "listen port")
 }
 
 func initHttpProfile() {
+	address := fmt.Sprintf("0.0.0.0:%d", port)
+	for {
+		http.ListenAndServe(address, nil)
+	}
 }
 
 func main() {
@@ -59,7 +65,7 @@ func main() {
 	}
 	module.InitModule()
 
-	ctx , cancel := context.WithCancel(context.Background())
+	ctx , cancel := context.WithCancel(context.TODO())
 	defer cancel()
 
 	log.Println("start log process...")
@@ -67,8 +73,7 @@ func main() {
 		log.Println(err)
 		return
 	}
-
-	go log.Println(http.ListenAndServe("0.0.0.0:6100", nil))
+	go initHttpProfile()
 	log.Println("wait end ...")
 	if err = conf.Wait(); err != nil {
 		return
